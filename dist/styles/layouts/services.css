@@ -1,0 +1,114 @@
+section#hero {
+  background: no-repeat center right / cover url('../../images/services-bg.jpg');
+}
+
+section#development {
+  display: grid;
+  gap: clamp(35px, calc(85 * 100vw / 1440), 85px);
+  grid-template-columns: 1.2fr 0.8fr;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#development image-block {
+  display: grid;
+  align-items: center;
+}
+
+section#development image-block>picture img {
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+
+section#development text-block {
+  display: grid;
+  gap: 40px;
+}
+
+section#development text-block ul {
+  display: grid;
+  gap: 40px;
+}
+
+@media (max-width: 1650px) {
+  section#development text-block {
+    max-width: 550px;
+    margin: auto;
+  }
+}
+
+section#pricing {
+  display: grid;
+  gap: 40px;
+  background: var(--gray);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#pricing prices-block {
+  display: flex;
+  gap: 50px;
+  flex-flow: row wrap;
+}
+
+section#pricing prices-block>* {
+  flex: 0 1 310px;
+}
+
+@media (max-width: 769px) {
+  section#pricing prices-block {
+    display: grid;
+    gap: 30px;
+    grid-auto-flow: column;
+    /* size of the first block in this container */
+    grid-template-columns: 65%;
+    /* size of a block in this container */
+    grid-auto-columns: 65%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory
+  }
+
+  section#pricing prices-block>* {
+    scroll-snap-align: center;
+  }
+}
+
+@media (min-width: 768.02px) {
+  section#pricing prices-block {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  section#pricing prices-block {
+    gap: 15px;
+    grid-template-columns: 85%;
+    grid-auto-columns: 85%;
+  }
+}
+
+@media (max-width: 426px) {
+  section#pricing prices-block {
+    grid-template-columns: 90%;
+    grid-auto-columns: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  section#development {
+    display: flex;
+    gap: 35px;
+    flex-flow: column nowrap;
+    max-width: 650px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1650px) {
+  section#development {
+    grid-template-columns: 1fr;
+  }
+}

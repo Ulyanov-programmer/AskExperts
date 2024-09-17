@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--? ↓ Disables forced link for phone number on iOS -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="description">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="mask-icon" href="./images/favicon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="./fonts/Lato-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Cabin-VariableFont_wdth,wght.woff2" as="font" type="font/woff2">
+
+  <title>Service single</title>
+
+  <!-- General stylesheets -->
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+
+  <script type="importmap">
+    {
+        "imports": {
+          "inputmask": "./assets/inputmask/inputmask.es6.js",
+          "just-validate": "./assets/justValidate/just-validate.production.min.js",
+          "nouislider": "./assets/noUiSlider/index.js",
+          "photoswipe-lightbox": "./assets/photoswipe/photoswipe-lightbox.esm.min.js",
+          "photoswipe": "./assets/photoswipe/photoswipe.esm.min.js",
+          "swiper": "./assets/swiper/swiper-bundle.min.mjs",
+          "typed": "./assets/typed/typed.min.js",
+          "mouseParallax": "./scripts/mouseParallax/parallax.src.ts",
+          "observerTools": "./scripts/observerTools/index.ts",
+          "stepByStepBlock": "./scripts/stepByStepBlock/stepByStepBlock.src.js",
+          "toggleBySwipe": "./scripts/toggleBySwipe/swipe.src.ts"
+        }
+      }
+    </script>
+
+  <link rel="stylesheet" href="./styles/layouts/components/header.css">
+  <link rel="stylesheet" href="./styles/layouts/components/footer.css">
+  <link rel="stylesheet" href="./styles/layouts/service-single.css">
+  <link rel="stylesheet" href="./scripts/dialogs/index.css">
+  <script type="module" src="./scripts/dialogs/index.js"></script>
+  <script type="module" src="./scripts/infiniteScroll/index.js"></script>
+  <link rel="stylesheet" href="./assets/swiper/swiper-bundle.min.css">
+  <script type="module">
+    import Swiper from './assets/swiper/swiper-bundle.min.mjs'
+    new Swiper(`#advantages-slider`, {
+      navigation: {
+        nextEl: `.advantages-next`,
+        prevEl: `.advantages-prev`,
+        disabledClass: 'inactive',
+      },
+      breakpoints: {
+        1600: {
+          slidesPerView: 3.5,
+        },
+        1240: {
+          slidesPerView: 3,
+          spaceBetween: 35,
+        },
+        768: {
+          slidesPerView: 2.5,
+        },
+        550: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        320: {
+          slidesPerView: 1.3,
+          spaceBetween: 15,
+        },
+      },
+    })
+  </script>
+
+</head>
+
+<body>
+  <header id="header">
+    <header-top>
+      <address> Monday - Friday 8AM - 9PM </address>
+      <address> 725 Park Ave, New York </address>
+      <socials-block>
+        <a href="#" target="_self" rel="noreferrer" title="Instagram">
+          <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Facebook">
+          <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Twitter">
+          <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="LinkedIn">
+          <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+        </a>
+      </socials-block>
+    </header-top>
+    <header-bottom>
+      <picture>
+        <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+        <img src="images/logo.svg" alt="logo" width="183" height="34">
+      </picture>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" target="_self" rel="noopener" href="./index.html"> Home </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./about.html"> About </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./services.html"> Services </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Pages.html"> Pages </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="tel:+8884521505">
+        <span> + (888) 452 1505 </span>
+      </a>
+      <button id="burgerButton" data-open-dialog-id="burger-menu" type="button" title="Open the burger menu">
+        <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+          </rect>
+          <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+          </rect>
+          <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+          </rect>
+        </svg>
+      </button>
+      <dialog id="burger-menu" data-modal-dialog="">
+        <nav>
+          <button data-close-dialog-id="burger-menu" type="button" title="Close the burger menu">
+            <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+              </rect>
+              <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+              </rect>
+              <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+              </rect>
+            </svg>
+          </button>
+          <ul>
+            <li>
+              <address> Monday - Friday 8AM - 9PM </address>
+            </li>
+            <li>
+              <address> 725 Park Ave, New York </address>
+            </li>
+            <li>
+              <a class="active" target="_self" rel="noopener" href="#"> Home </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./about.html"> About </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./services.html"> Services </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="#"> Pages </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </dialog>
+    </header-bottom>
+  </header>
+
+  <main>
+
+    <section id="hero">
+      <div>
+        <highlighted-text class="yellow"> Service sINGLE </highlighted-text>
+        <h1> Services Details </h1>
+      </div>
+    </section>
+    <section id="financial-projections">
+      <three-section-block>
+        <header-section>
+          <img src="./images/icons/stat_desc.svg" loading="lazy" alt="" width="97" height="72">
+          <h2> Financial Projections </h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </header-section>
+        <buttons-block>
+          <button class="advantages-prev" type="button" title="prev">
+            <img src="./images/icons/toLeft.svg" loading="lazy" alt="" width="44" height="45">
+          </button>
+          <button class="advantages-next" type="button" title="next">
+            <img src="./images/icons/yellowToRight.svg" loading="lazy" alt="" width="44" height="45">
+          </button>
+        </buttons-block>
+      </three-section-block>
+      <div id="advantages-slider" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <small-advantages-block hover-to-black="">
+              <svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818">
+                </path>
+              </svg>
+              <strong> Income Statement </strong>
+              <p> The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) </p>
+            </small-advantages-block>
+          </div>
+          <div class="swiper-slide">
+            <small-advantages-block hover-to-black="">
+              <svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818">
+                </path>
+              </svg>
+              <strong> Income Statement </strong>
+              <p> The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) </p>
+            </small-advantages-block>
+          </div>
+          <div class="swiper-slide">
+            <small-advantages-block hover-to-black="">
+              <svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818">
+                </path>
+              </svg>
+              <strong> Income Statement </strong>
+              <p> The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) </p>
+            </small-advantages-block>
+          </div>
+          <div class="swiper-slide">
+            <small-advantages-block hover-to-black="">
+              <svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818">
+                </path>
+              </svg>
+              <strong> Income Statement </strong>
+              <p> The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) </p>
+            </small-advantages-block>
+          </div>
+          <div class="swiper-slide">
+            <small-advantages-block hover-to-black="">
+              <svg width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818">
+                </path>
+              </svg>
+              <strong> Income Statement </strong>
+              <p> The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) </p>
+            </small-advantages-block>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="vision">
+      <images-block class="decorated-image-small">
+
+        <picture>
+
+          <source srcset="./images/exept-decor.avif" type="image/avif">
+
+          <source srcset="./images/exept-decor.webp" type="image/webp">
+          <img class="" src="./images/exept-decor.jpg" loading="lazy" alt="" width="636" height="396">
+        </picture>
+
+      </images-block>
+      <text-block>
+        <header-section>
+          <highlighted-text class="yellow"> WE'LL WORK WITH YOU </highlighted-text>
+          <h2> What To Expect </h2>
+          <p> Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps. </p>
+        </header-section>
+        <ul>
+          <li>
+            <p> Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day. </p>
+          </li>
+          <li>
+            <p> Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital. </p>
+          </li>
+        </ul>
+      </text-block>
+    </section>
+    <infinite-scroll id="clients-line">
+      <img src="./images/clients/1.svg" alt="" width="206" height="53">
+      <img src="./images/clients/2.svg" alt="" width="95" height="90">
+      <img src="./images/clients/3.svg" alt="" width="186" height="49">
+      <img src="./images/clients/4.svg" alt="" width="175" height="53">
+      <img src="./images/clients/5.svg" alt="" width="241" height="48">
+      <img src="./images/clients/6.svg" alt="" width="247" height="53">
+    </infinite-scroll>
+    <section id="video-block" class="black">
+      <header-section centered="">
+        <highlighted-text class="green"> Our History </highlighted-text>
+        <h2> Strategy for Every Stage in the Client's Journey </h2>
+      </header-section>
+      <play-area>
+        <button type="button" title="Play the video" data-open-dialog-id="history-video">
+          <svg width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="54.5" cy="54.5" r="54.5" fill="white" fill-opacity="0.08">
+            </circle>
+            <circle cx="54.5" cy="54.5" r="54.35" stroke="white" stroke-opacity="0.42" stroke-width="0.3">
+            </circle>
+            <circle cx="54.5" cy="54.5" r="43.35" fill="white" fill-opacity="0.17" stroke="#D0D0D0" stroke-width="0.3">
+            </circle>
+            <circle class="main-circle" cx="54.5" cy="54.5" r="33.5" fill="white">
+            </circle>
+            <path d="M51.0194 62.7189L59.6309 55.4472C59.7696 55.33 59.881 55.1846 59.9574 55.021C60.0337 54.8574 60.0732 54.6795 60.0732 54.4994C60.0732 54.3193 60.0337 54.1414 59.9574 53.9778C59.881 53.8142 59.7696 53.6688 59.6309 53.5516L51.0194 46.2799C50.1974 45.5859 48.9277 46.1613 48.9277 47.2278V61.7731C48.9277 62.8396 50.1974 63.4149 51.0194 62.7189Z" fill="#3B3A5D">
+            </path>
+          </svg>
+        </button>
+      </play-area>
+      <dialog id="history-video" data-modal-dialog="">
+        <div>
+          <span> Your video could be here </span>
+        </div>
+      </dialog>
+    </section>
+    <section id="contact">
+      <text-block>
+        <header-section>
+          <highlighted-text class="yellow"> Proccess </highlighted-text>
+          <h2> Contact Us. It’s Easy. </h2>
+          <p> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative. </p>
+        </header-section>
+        <aside>
+          <ul>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/yellow_yellow-bg_tel.svg" loading="lazy" alt="" width="53" height="53">
+              <strong>
+                <a href="tel:+88005553535"> +1 800 100 900 </a>
+              </strong>
+              <p> Call Today </p>
+            </three-section-block>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/greenClocks.svg" loading="lazy" alt="" width="53" height="53">
+              <strong> 9AM - 5PM </strong>
+              <p> Monday To Friday </p>
+            </three-section-block>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/grayLocation.svg" loading="lazy" alt="" width="53" height="53">
+              <strong>
+                <address> 195 Devonshire St Boston, MA 02110 </address>
+              </strong>
+              <p> USA Office </p>
+            </three-section-block>
+          </ul>
+        </aside>
+      </text-block>
+      <images-block>
+
+        <picture>
+
+          <source srcset="./images/contact-us-decor.avif" type="image/avif">
+
+          <source srcset="./images/contact-us-decor.webp" type="image/webp">
+          <img class="" src="./images/contact-us-decor.png" loading="lazy" alt="" width="1559" height="1148">
+        </picture>
+
+      </images-block>
+    </section>
+    <section id="FAQ">
+      <div>
+        <header-section centered="">
+          <highlighted-text class="green"> FAQ </highlighted-text>
+          <h2> Customer Questions </h2>
+        </header-section>
+        <spoiler-wrapper>
+          <button data-toggle-dialog-id="spoiler" type="button"> What will happen when I’ve sent my application? <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5685 1.63086V18.8127M19.1594 10.2218H1.97754" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </button>
+          <content-block>
+            <dialog id="spoiler" open="">
+              <p> Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements. </p>
+            </dialog>
+          </content-block>
+        </spoiler-wrapper>
+        <spoiler-wrapper>
+          <button data-toggle-dialog-id="spoiler2" type="button"> What will happen when I’ve sent my application? <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5685 1.63086V18.8127M19.1594 10.2218H1.97754" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </button>
+          <content-block>
+            <dialog id="spoiler2">
+              <p> Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements. </p>
+            </dialog>
+          </content-block>
+        </spoiler-wrapper>
+        <spoiler-wrapper>
+          <button data-toggle-dialog-id="spoiler3" type="button"> What will happen when I’ve sent my application? <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5685 1.63086V18.8127M19.1594 10.2218H1.97754" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </button>
+          <content-block>
+            <dialog id="spoiler3">
+              <p> Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements. </p>
+            </dialog>
+          </content-block>
+        </spoiler-wrapper>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <footer-top role="navigation">
+      <nav-block>
+        <picture>
+          <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+          <img src="images/logo.svg" loading="lazy" alt="logo" width="183" height="34">
+        </picture>
+        <socials-block class="grid">
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">
+            <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+          </a>
+        </socials-block>
+      </nav-block>
+      <nav-block>
+        <strong> Product </strong>
+        <ul>
+          <li>
+            <a href="#"> Service </a>
+          </li>
+          <li>
+            <a href="#"> FAQ </a>
+          </li>
+          <li>
+            <a href="#"> Single Service </a>
+          </li>
+          <li>
+            <a href="#"> Get Quote </a>
+          </li>
+          <li>
+            <a href="#"> Prices </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Company </strong>
+        <ul>
+          <li>
+            <a href="#"> About </a>
+          </li>
+          <li>
+            <a href="#"> News </a>
+          </li>
+          <li>
+            <a href="#"> Contacts </a>
+          </li>
+          <li>
+            <a href="#"> Testimonials </a>
+          </li>
+          <li>
+            <a href="#"> Our team </a>
+          </li>
+          <li>
+            <a href="#"> Our approach </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Address </strong>
+        <address> 1700 W Blancke St, kiyev port south USA, America </address>
+        <button class="white" type="button"> Book an Appoinment </button>
+      </nav-block>
+    </footer-top>
+    <footer-bottom>
+      <small> ©2022 Consultalk. All rights reserved </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Terms of Service </a>
+      </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Privacy Policy </a>
+      </small>
+    </footer-bottom>
+  </footer>
+</body>
+
+<!-- Made in Russia, with ❤, by Ivan Ulyanov. -->
+
+</html>

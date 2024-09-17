@@ -1,0 +1,56 @@
+section#hero {
+  background: no-repeat center right / cover url('../../images/service-single-hero-bg.jpg');
+}
+
+section#financial-projections {
+  display: grid;
+  gap: clamp(30px, calc(70 * 100vw / 1440), 70px);
+  background: var(--gray);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#financial-projections .swiper#advantages-slider {
+  max-width: 100%;
+}
+
+section#vision {
+  padding-bottom: 50px;
+}
+
+infinite-scroll#clients-line {
+  --duration: 30s;
+  --gap: clamp(40px, calc(130 * 100vw / 1440), 130px);
+  padding-block: 50px;
+  align-content: center
+}
+
+section#video-block.black play-area {
+  background: no-repeat center / contain -webkit-image-set(url('../../images/strategy.png') 1x, url('../../images/strategy.webp') 1x, url('../../images/strategy.avif') 1x);
+  background: no-repeat center / contain image-set(url('../../images/strategy.png') 1x, url('../../images/strategy.webp') 1x, url('../../images/strategy.avif') 1x);
+}
+
+section#FAQ {
+  margin-inline: var(--content-inline-padding);
+  padding-bottom: var(--content-block-padding);
+}
+
+section#FAQ div {
+  display: grid;
+  gap: 40px;
+  background: var(--gray);
+  padding-block: clamp(40px, calc(150 * 100vw / 1440), 150px);
+  padding-inline: clamp(30px, calc(200 * 100vw / 1440), 200px);
+  border-radius: 30px;
+}
+
+@media (max-width: 426px) {
+  section#FAQ div {
+    padding-inline: 25px;
+  }
+}
+
+@media (max-width: 426px) {
+  infinite-scroll#clients-line {
+    --duration: 20s;
+  }
+}

@@ -1,0 +1,68 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/team-hero-bg.jpg') 1x, url('../../images/team-hero-bg.webp') 1x, url('../../images/team-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/team-hero-bg.jpg') 1x, url('../../images/team-hero-bg.webp') 1x, url('../../images/team-hero-bg.avif') 1x);
+}
+
+section#team {
+  display: grid;
+  gap: 40px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#talk {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  margin: var(--content-block-padding) var(--content-inline-padding);
+  background: no-repeat center right / auto 100% url('../../images/contact-bg.webp'), var(--black);
+  color: var(--white);
+  border-radius: 30px;
+  padding: clamp(20px, calc(80 * 100vw / 1440), 80px) clamp(30px, calc(100 * 100vw / 1440), 100px);
+}
+
+@media (max-width: 426px) {
+  section#talk {
+    text-align: center;
+    justify-items: center
+  }
+
+  section#talk form {
+    justify-content: center;
+  }
+}
+
+section#talk>* {
+  max-width: 500px;
+}
+
+section#talk h2,
+section#talk p {
+  color: var(--white);
+  text-shadow: 0 0 7px #000;
+}
+
+section#talk form {
+  margin-top: 15px;
+}
+
+section#about-teammate text-block header {
+  --hor-gap: 30px;
+  display: inline-grid;
+  gap: 10px var(--hor-gap);
+  grid-template: 'name socials' auto 'post post' auto / 1fr 1fr;
+  align-items: center;
+  justify-items: start;
+}
+
+@media (max-width: 1240px) {
+  section#about-teammate text-block header {
+    grid-template: 'name' auto 'post' auto 'socials' auto / 1fr
+  }
+}
+
+@media (max-width: 769px) {
+  section#about-teammate text-block header {
+    margin: auto;
+    justify-items: center
+  }
+}

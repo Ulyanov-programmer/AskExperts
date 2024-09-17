@@ -1,0 +1,55 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/contact-hero-bg.jpg') 1x, url('../../images/contact-hero-bg.webp') 1x, url('../../images/contact-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/contact-hero-bg.jpg') 1x, url('../../images/contact-hero-bg.webp') 1x, url('../../images/contact-hero-bg.avif') 1x);
+}
+
+section#talk {
+  display: grid;
+  grid-template: auto/1fr 1fr;
+  gap: 30px clamp(30px, calc(80 * 100vw / 1440), 80px);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#talk images-block.decorated-image>picture img {
+  position: relative;
+  border-radius: 30px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  section#talk images-block.decorated-image>picture img {
+    max-height: 300px;
+  }
+}
+
+section#talk content-block {
+  display: grid;
+  gap: 35px;
+  padding: 70px 0;
+}
+
+section#talk content-block aside {
+  display: grid;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  section#talk content-block {
+    padding: 0;
+    margin: auto;
+    max-width: 400px;
+  }
+}
+
+section#contact form[action='#'].two-columns label textarea#contact-text {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  section#talk {
+    grid-template: auto/auto;
+  }
+}

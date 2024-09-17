@@ -1,0 +1,61 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/caseStudy-hero-bg.jpg') 1x, url('../../images/caseStudy-hero-bg.webp') 1x, url('../../images/caseStudy-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/caseStudy-hero-bg.jpg') 1x, url('../../images/caseStudy-hero-bg.webp') 1x, url('../../images/caseStudy-hero-bg.avif') 1x);
+}
+
+section#cases {
+  display: grid;
+  gap: 50px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#cases buttons-row {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 30px;
+  padding: 30px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+section#cases buttons-row>button {
+  padding: 5px 10px;
+  -webkit-text-decoration: underline transparent;
+  text-decoration: underline transparent;
+  text-underline-offset: 10px;
+}
+
+@media (hover: hover) {
+  section#cases buttons-row>button:hover {
+    color: var(--yellow);
+    background: none;
+    text-underline-offset: 7px;
+    text-decoration-color: var(--yellow);
+  }
+}
+
+section#cases buttons-row>button:focus {
+  color: var(--yellow);
+  background: none;
+  text-underline-offset: 7px;
+  text-decoration-color: var(--yellow);
+}
+
+section#cases gallery-block {
+  border-radius: 20px;
+  background: var(--gray);
+}
+
+@media (max-width: 769px) {
+  section#cases gallery-block {
+    margin-inline: calc(-1 * var(--content-inline-padding));
+  }
+}
+
+section#contact form[action='#'].two-columns label textarea#contact-text {
+  resize: none;
+}

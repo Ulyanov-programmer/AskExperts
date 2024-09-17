@@ -1,0 +1,18 @@
+@layer modules {
+  dialog[data-modal-dialog]::backdrop {
+    background: rgb(0 0 0 / 30%);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
+
+  dialog[data-modal-dialog]:not([open]) {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  /* For dialogs like small windows. */
+  dialog:not([data-modal-dialog]):not([open]) {
+    pointer-events: none;
+    opacity: 0;
+  }
+}

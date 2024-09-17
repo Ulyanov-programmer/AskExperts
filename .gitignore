@@ -1,6 +1,5 @@
 /node_modules
 /tmp
-/dist
 .yarn/*
 !.yarn/cache
 !.yarn/patches

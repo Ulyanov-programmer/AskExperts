@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--? ↓ Disables forced link for phone number on iOS -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="description">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="mask-icon" href="./images/favicon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="./fonts/Lato-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Cabin-VariableFont_wdth,wght.woff2" as="font" type="font/woff2">
+
+  <title>AskExperts</title>
+
+  <!-- General stylesheets -->
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+
+  <script type="importmap">
+    {
+        "imports": {
+          "inputmask": "./assets/inputmask/inputmask.es6.js",
+          "just-validate": "./assets/justValidate/just-validate.production.min.js",
+          "nouislider": "./assets/noUiSlider/index.js",
+          "photoswipe-lightbox": "./assets/photoswipe/photoswipe-lightbox.esm.min.js",
+          "photoswipe": "./assets/photoswipe/photoswipe.esm.min.js",
+          "swiper": "./assets/swiper/swiper-bundle.min.mjs",
+          "typed": "./assets/typed/typed.min.js",
+          "mouseParallax": "./scripts/mouseParallax/parallax.src.ts",
+          "observerTools": "./scripts/observerTools/index.ts",
+          "stepByStepBlock": "./scripts/stepByStepBlock/stepByStepBlock.src.js",
+          "toggleBySwipe": "./scripts/toggleBySwipe/swipe.src.ts"
+        }
+      }
+    </script>
+
+  <link rel="stylesheet" href="./styles/layouts/components/header.css">
+  <link rel="stylesheet" href="./styles/layouts/components/footer.css">
+  <link rel="stylesheet" href="./styles/layouts/index.css">
+
+  <link rel="stylesheet" href="./scripts/dialogs/index.css">
+  <script type="module" src="./scripts/dialogs/index.js"></script>
+
+  <script src="./scripts/infiniteScroll/index.js"></script>
+
+  <link rel="stylesheet" href="./assets/swiper/swiper-bundle.min.css">
+  <script type="module">
+    import Swiper from './assets/swiper/swiper-bundle.min.mjs'
+    new Swiper(`#feedback-slider`, {
+      grabCursor: true,
+      loop: true,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: `.feedback-next`,
+        prevEl: `.feedback-prev`,
+        disabledClass: 'inactive',
+      },
+      thumbs: {
+        swiper: new Swiper(`#feedback-text`, {}),
+        slideThumbActiveClass: 'active',
+      },
+    })
+  </script>
+
+  <script type="module" src="./scripts/validateContactForm.js"></script>
+
+</head>
+
+<body>
+  <header id="header">
+    <header-top>
+      <address> Monday - Friday 8AM - 9PM </address>
+      <address> 725 Park Ave, New York </address>
+      <socials-block>
+        <a href="#" target="_self" rel="noreferrer" title="Instagram">
+          <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Facebook">
+          <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Twitter">
+          <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="LinkedIn">
+          <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+        </a>
+      </socials-block>
+    </header-top>
+    <header-bottom>
+      <picture>
+        <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+        <img src="images/logo.svg" alt="logo" width="183" height="34">
+      </picture>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" target="_self" rel="noopener" href="./index.html"> Home </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./about.html"> About </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./services.html"> Services </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Pages.html"> Pages </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="tel:+8884521505">
+        <span> + (888) 452 1505 </span>
+      </a>
+      <button id="burgerButton" data-open-dialog-id="burger-menu" type="button" title="Open the burger menu">
+        <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+          </rect>
+          <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+          </rect>
+          <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+          </rect>
+        </svg>
+      </button>
+      <dialog id="burger-menu" data-modal-dialog="">
+        <nav>
+          <button data-close-dialog-id="burger-menu" type="button" title="Close the burger menu">
+            <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+              </rect>
+              <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+              </rect>
+              <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+              </rect>
+            </svg>
+          </button>
+          <ul>
+            <li>
+              <address> Monday - Friday 8AM - 9PM </address>
+            </li>
+            <li>
+              <address> 725 Park Ave, New York </address>
+            </li>
+            <li>
+              <a class="active" target="_self" rel="noopener" href="#"> Home </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./about.html"> About </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./services.html"> Services </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="#"> Pages </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </dialog>
+    </header-bottom>
+  </header>
+
+  <main>
+
+    <section id="hero">
+      <div>
+        <h1>
+          Your small business <br>
+          growth advisors
+        </h1>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+        <footer>
+          <button type="button">Our Services</button>
+          <button class="white withIcon" type="button">
+            <img src="./images/notepad.svg" alt="" width="44" height="44">Book a Meeting
+          </button>
+        </footer>
+      </div>
+    </section>
+    <infinite-scroll id="clients-line">
+      <img src="./images/clients/1.svg" alt="" width="206" height="53">
+      <img src="./images/clients/2.svg" alt="" width="95" height="90">
+      <img src="./images/clients/3.svg" alt="" width="186" height="49">
+      <img src="./images/clients/4.svg" alt="" width="175" height="53">
+      <img src="./images/clients/5.svg" alt="" width="241" height="48">
+      <img src="./images/clients/6.svg" alt="" width="247" height="53">
+    </infinite-scroll>
+    <section id="about-us">
+      <text-block>
+        <highlighted-text class="yellow"> About us </highlighted-text>
+        <h2>About our Consulting Agency Team</h2>
+        <strong>
+          We create experiences and build products that make business grow
+        </strong>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+        <footer>
+          <advantage-block>
+            <span> 400+ </span>
+            <strong> Business Services </strong>
+          </advantage-block>
+          <advantage-block>
+            <span> 100+ </span>
+            <strong> Happy Customers </strong>
+          </advantage-block>
+        </footer>
+      </text-block>
+      <images-block> </images-block>
+    </section>
+    <section id="services">
+      <header-section centered="">
+        <highlighted-text class="green"> Services </highlighted-text>
+        <h2>Get Control Over Your Business I take your finance to next level</h2>
+      </header-section>
+      <services-container>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+      </services-container>
+    </section>
+    <section id="process">
+      <process-block>
+        <highlighted-text class="green"> Process </highlighted-text>
+        <h2>There have some easy steps to join with us!</h2>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. Iterative approaches to corporate strategy foster
+          collaborative thinking to further the overall value proposition.
+        </p>
+        <ol>
+          <three-section-block role="listitem">
+            <strong> Setup Account </strong>
+            <p>
+              We understand the importance of approaching each work integrally.
+            </p>
+          </three-section-block>
+          <three-section-block role="listitem">
+            <strong> Consult with us </strong>
+            <p>
+              Increase social reach and productivity with our App Directory, a
+              collection.
+            </p>
+          </three-section-block>
+          <three-section-block role="listitem">
+            <strong> Payment & Boost </strong>
+            <p>
+              We encourage every team member to be a whole person. We have a
+              flexible.
+            </p>
+          </three-section-block>
+        </ol>
+      </process-block>
+      <about-block>
+        <highlighted-text class="yellow">
+          Growing with our clients
+        </highlighted-text>
+        <h2>30 Years of Experience</h2>
+        <p>
+          Capitalize on low hanging fruit to identify a ballpark value added
+          activity beta test. Override the digital divide with additional from
+          DevOps.<br>
+          <br>Leverage agile frameworks to provide a robust synopsis for high
+          level overviews. Iterative approaches to corporate strategy foster
+          collaborative thinking to further the overall value proposition.
+        </p>
+        <advantages-blocks>
+          <small-advantages-block>
+            <img src="./images/icons/time.svg" loading="lazy" alt="" width="54" height="53">
+            <strong> Consistency </strong>
+            <p>Podcasting operational change management workflow.</p>
+          </small-advantages-block>
+          <small-advantages-block>
+            <img src="./images/icons/time.svg" loading="lazy" alt="" width="54" height="53">
+            <strong> Consistency </strong>
+            <p>Podcasting operational change management workflow.</p>
+          </small-advantages-block>
+          <small-advantages-block>
+            <img src="./images/icons/time.svg" loading="lazy" alt="" width="54" height="53">
+            <strong> Consistency </strong>
+            <p>Podcasting operational change management workflow.</p>
+          </small-advantages-block>
+          <small-advantages-block>
+            <img src="./images/icons/time.svg" loading="lazy" alt="" width="54" height="53">
+            <strong> Consistency </strong>
+            <p>Podcasting operational change management workflow.</p>
+          </small-advantages-block>
+        </advantages-blocks>
+      </about-block>
+    </section>
+    <section id="gallery">
+      <header-section three-sections="">
+        <highlighted-text class="green"> Proccess </highlighted-text>
+        <h2>
+          Our client, global analytical techno company, wanted to build market.
+        </h2>
+        <button class="yellow" type="button">More Gallery</button>
+      </header-section>
+      <gallery-block>
+        <gallery-item>
+          <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+            <overlay-content>
+              <strong> Taxes & Efficiency </strong>
+              <small> Business </small>
+            </overlay-content>
+          </a>
+        </gallery-item>
+        <gallery-item>
+          <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+            <overlay-content>
+              <strong> Taxes & Efficiency </strong>
+              <small> Business </small>
+            </overlay-content>
+          </a>
+        </gallery-item>
+        <gallery-item>
+          <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+            <overlay-content>
+              <strong> Taxes & Efficiency </strong>
+              <small> Business </small>
+            </overlay-content>
+          </a>
+        </gallery-item>
+        <gallery-item>
+          <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+            <overlay-content>
+              <strong> Taxes & Efficiency </strong>
+              <small> Business </small>
+            </overlay-content>
+          </a>
+        </gallery-item>
+        <gallery-item>
+          <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+            <overlay-content>
+              <strong> Taxes & Efficiency </strong>
+              <small> Business </small>
+            </overlay-content>
+          </a>
+        </gallery-item>
+        <gallery-item>
+          <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+            <overlay-content>
+              <strong> Taxes & Efficiency </strong>
+              <small> Business </small>
+            </overlay-content>
+          </a>
+        </gallery-item>
+      </gallery-block>
+      <advantages-row>
+        <div>
+          <strong> 1128+ </strong>
+          <small> Successful Work </small>
+        </div>
+        <div>
+          <strong> 1128+ </strong>
+          <small> Successful Work </small>
+        </div>
+        <div>
+          <strong> 1128+ </strong>
+          <small> Successful Work </small>
+        </div>
+        <div>
+          <strong> 1128+ </strong>
+          <small> Successful Work </small>
+        </div>
+      </advantages-row>
+    </section>
+    <section id="feedback">
+      <highlighted-text class="green"> Client Feedback </highlighted-text>
+      <div id="feedback-text" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h3>
+              <muted-text> Lorem ipsum dolor sit amet, consectetur </muted-text>
+              <span> adipiscing elit, sed do eiusmod </span>
+              <muted-text> tempor incididunt ut labore et dolore </muted-text>
+            </h3>
+          </div>
+          <div class="swiper-slide">
+            <h3>
+              <muted-text> Lorem ipsum </muted-text>
+              <span> elit, sed do eiusmod </span>
+              <muted-text> tempor incididunt </muted-text>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <main-slider>
+        <button class="gray withIcon feedback-prev" type="button">
+          <img src="./images/icons/toLeft.svg" loading="lazy" alt="" width="44" height="45">Prev
+        </button>
+        <div id="feedback-slider" class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+                <picture>
+                  <img src="./images/client.png" loading="lazy" alt="" width="316" height="316">
+                </picture>
+                <small> Web Designer </small>
+                <strong> Kathleen Smith </strong>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <picture>
+                  <img src="./images/client.png" loading="lazy" alt="" width="316" height="316">
+                </picture>
+                <small> Web Designer </small>
+                <strong> Kathleen Smith </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="gray withIcon feedback-next" type="button">
+          Next
+          <img src="./images/icons/yellowToRight.svg" loading="lazy" alt="" width="44" height="45">
+        </button>
+      </main-slider>
+    </section>
+    <section id="read">
+      <content-block>
+        <highlighted-text class="green"> Book Now </highlighted-text>
+        <h2>Better Consult, Better Results</h2>
+        <p>
+          Our software development agency has a growth up to 30% per each year. If
+          you are result-oriented, not afraid to take initiative – drop us a note
+          and join our team!
+        </p>
+        <a class="likeButton yellow" href="tel:+88005553535">
+          <img src="./images/icons/yellow_tel.svg" loading="lazy" alt="" width="44" height="44">+800
+          1234 654
+        </a>
+      </content-block>
+      <images-block>
+
+        <picture>
+
+          <source srcset="./images/read-section-bottom-img.avif" type="image/avif">
+
+          <source srcset="./images/read-section-bottom-img.webp" type="image/webp">
+          <img class="" src="./images/read-section-bottom-img.png" loading="lazy" alt="" width="920" height="818">
+        </picture>
+
+        <picture>
+
+          <source srcset="./images/read-section-top-img.avif" type="image/avif">
+
+          <source srcset="./images/read-section-top-img.webp" type="image/webp">
+          <img class="" src="./images/read-section-top-img.png" loading="lazy" alt="" width="245" height="345">
+        </picture>
+
+      </images-block>
+    </section>
+    <section id="news">
+      <header-section three-sections="">
+        <highlighted-text class="green"> Blog </highlighted-text>
+        <h2>Take a look at our latest articles & resources</h2>
+        <a class="likeButton yellow" href="./blog.html" target="_blank" rel="noopener noreferrer">
+          More News
+        </a>
+      </header-section>
+      <section>
+        <news-item>
+          <a href="./blog-single.html" target="_blank" rel="noopener noreferrer">
+
+            <picture>
+
+              <source srcset="./images/news-image.avif" type="image/avif">
+
+              <source srcset="./images/news-image.webp" type="image/webp">
+              <img class="" src="./images/news-image.jpg" loading="lazy" alt="" width="583" height="321">
+            </picture>
+
+          </a>
+          <h5>Consulting Fees Study 2019 (And How To Raise Your Rates)</h5>
+          <p>
+            Leverage agile frameworks to provide a robust synopsis for high level
+            overviews. Iterative approaches to corporate strategy foster
+            collaborative thinking to further the overall value proposition.
+          </p>
+          <footer>
+            <author-block>
+
+              <picture>
+
+                <source srcset="./images/news-author.avif" type="image/avif">
+
+                <source srcset="./images/news-author.webp" type="image/webp">
+                <img class="" src="./images/news-author.jpg" loading="lazy" alt="" width="60" height="61">
+              </picture>
+
+              <span> John Carter </span>
+              <span> September 1, 2022 </span>
+            </author-block>
+            <a class="likeButton" href="#" target="_blank" rel="noopener noreferrer">
+              Read More
+            </a>
+          </footer>
+        </news-item>
+        <news-item>
+          <a href="./blog-single.html" target="_blank" rel="noopener noreferrer">
+
+            <picture>
+
+              <source srcset="./images/news-image.avif" type="image/avif">
+
+              <source srcset="./images/news-image.webp" type="image/webp">
+              <img class="" src="./images/news-image.jpg" loading="lazy" alt="" width="583" height="321">
+            </picture>
+
+          </a>
+          <h5>Consulting Fees Study 2019 (And How To Raise Your Rates)</h5>
+          <p>
+            Leverage agile frameworks to provide a robust synopsis for high level
+            overviews. Iterative approaches to corporate strategy foster
+            collaborative thinking to further the overall value proposition.
+          </p>
+          <footer>
+            <author-block>
+
+              <picture>
+
+                <source srcset="./images/news-author.avif" type="image/avif">
+
+                <source srcset="./images/news-author.webp" type="image/webp">
+                <img class="" src="./images/news-author.jpg" loading="lazy" alt="" width="60" height="61">
+              </picture>
+
+              <span> John Carter </span>
+              <span> September 1, 2022 </span>
+            </author-block>
+            <a class="likeButton" href="#" target="_blank" rel="noopener noreferrer">
+              Read More
+            </a>
+          </footer>
+        </news-item>
+      </section>
+    </section>
+    <section id="contact">
+      <text-block>
+        <header-section>
+          <highlighted-text class="yellow"> Proccess </highlighted-text>
+          <h2>Contact Us. It’s Easy.</h2>
+          <p>
+            Leverage agile frameworks to provide a robust synopsis for high level
+            overviews. Iterative approaches to corporate strategy foster
+            collaborative.
+          </p>
+        </header-section>
+        <aside>
+          <ul>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/yellow_yellow-bg_tel.svg" loading="lazy" alt="" width="53" height="53">
+              <strong>
+                <a href="tel:+88005553535"> +1 800 100 900 </a>
+              </strong>
+              <p>Call Today</p>
+            </three-section-block>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/greenClocks.svg" loading="lazy" alt="" width="53" height="53">
+              <strong> 9AM - 5PM </strong>
+              <p>Monday To Friday</p>
+            </three-section-block>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/grayLocation.svg" loading="lazy" alt="" width="53" height="53">
+              <strong>
+                <address>195 Devonshire St Boston, MA 02110</address>
+              </strong>
+              <p>USA Office</p>
+            </three-section-block>
+          </ul>
+        </aside>
+      </text-block>
+      <form class="two-columns" action="#" id="contact">
+        <label>
+          Full Name
+          <input type="text" placeholder="John David" name="contact-name">
+        </label>
+        <label>
+          Email
+          <input type="email" placeholder="consult@mail.com" required="" name="contact-mail">
+        </label>
+        <label>
+          Phone
+          <input type="tel" placeholder="+008 654 231" name="contact-phone">
+        </label>
+        <label>
+          Company(optional)
+          <input type="text" placeholder="yourcompany.com" name="contact-company-site">
+        </label>
+        <label>
+          Message
+          <textarea id="contact-text" name="contact-text" placeholder="Briefly tell us about your project and your current goals. How can we help you?"></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <footer-top role="navigation">
+      <nav-block>
+        <picture>
+          <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+          <img src="images/logo.svg" loading="lazy" alt="logo" width="183" height="34">
+        </picture>
+        <socials-block class="grid">
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">
+            <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+          </a>
+        </socials-block>
+      </nav-block>
+      <nav-block>
+        <strong> Product </strong>
+        <ul>
+          <li>
+            <a href="#"> Service </a>
+          </li>
+          <li>
+            <a href="#"> FAQ </a>
+          </li>
+          <li>
+            <a href="#"> Single Service </a>
+          </li>
+          <li>
+            <a href="#"> Get Quote </a>
+          </li>
+          <li>
+            <a href="#"> Prices </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Company </strong>
+        <ul>
+          <li>
+            <a href="#"> About </a>
+          </li>
+          <li>
+            <a href="#"> News </a>
+          </li>
+          <li>
+            <a href="#"> Contacts </a>
+          </li>
+          <li>
+            <a href="#"> Testimonials </a>
+          </li>
+          <li>
+            <a href="#"> Our team </a>
+          </li>
+          <li>
+            <a href="#"> Our approach </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Address </strong>
+        <address> 1700 W Blancke St, kiyev port south USA, America </address>
+        <button class="white" type="button"> Book an Appoinment </button>
+      </nav-block>
+    </footer-top>
+    <footer-bottom>
+      <small> ©2022 Consultalk. All rights reserved </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Terms of Service </a>
+      </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Privacy Policy </a>
+      </small>
+    </footer-bottom>
+  </footer>
+</body>
+
+<!-- Made in Russia, with ❤, by Ivan Ulyanov. -->
+
+</html>

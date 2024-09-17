@@ -1,0 +1,8 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/protection-hero-bg.jpg') 1x, url('../../images/protection-hero-bg.webp') 1x, url('../../images/protection-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/protection-hero-bg.jpg') 1x, url('../../images/protection-hero-bg.webp') 1x, url('../../images/protection-hero-bg.avif') 1x);
+}
+
+section#password {
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}

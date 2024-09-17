@@ -1,0 +1,74 @@
+section#error {
+  padding: calc(var(--content-block-padding) * 1.5) var(--content-inline-padding);
+  background: var(--gray);
+}
+
+section#error div {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+section#error div:before {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  content: url('../../images/bgPattern.svg');
+}
+
+section#error div:after {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  content: url('../../images/icons/green-square.svg');
+}
+
+section#error div content-block {
+  isolation: isolate;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 30px;
+  -webkit-backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
+  padding: 60px 80px;
+}
+
+section#error div content-block strong {
+  font-weight: 700;
+  font-family: 'Cabin';
+  font-size: 120px;
+  color: var(--black);
+}
+
+section#error div content-block a.likeButton.yellow.big {
+  margin-top: 25px;
+}
+
+@media (max-width: 500px) {
+  section#error div content-block strong {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  section#error div:before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  section#error div:after {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  section#error div content-block {
+    padding: 20px 40px;
+  }
+}

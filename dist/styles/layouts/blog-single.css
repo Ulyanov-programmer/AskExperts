@@ -1,0 +1,86 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/blog-single-hero-bg.jpg') 1x, url('../../images/blog-single-hero-bg.webp') 1x, url('../../images/blog-single-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/blog-single-hero-bg.jpg') 1x, url('../../images/blog-single-hero-bg.webp') 1x, url('../../images/blog-single-hero-bg.avif') 1x);
+  height: 750px;
+}
+
+section#blog-text.blog-lists {
+  display: grid;
+  gap: 30px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#blog-text.blog-lists>picture img {
+  border-radius: 20px;
+  max-height: 500px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: left;
+  object-position: left;
+}
+
+section#blog-text.blog-lists about-author {
+  position: relative;
+  display: grid;
+  grid-template: auto/auto auto;
+  gap: 15px 35px;
+  background: var(--black);
+  border-radius: 30px;
+  padding: clamp(20px, calc(60 * 100vw / 1440), 60px) clamp(20px, calc(50 * 100vw / 1440), 50px);
+  color: var(--white);
+  overflow: hidden;
+}
+
+section#blog-text.blog-lists about-author>* {
+  z-index: 1;
+  text-shadow: 0 0 3px #000;
+}
+
+section#blog-text.blog-lists about-author:after {
+  position: absolute;
+  rotate: 45deg;
+  translate: 0 -250px;
+  top: 0;
+  right: 0;
+  content: url('../../images/bgPattern.svg');
+}
+
+section#blog-text.blog-lists about-author>picture {
+  grid-row: span 4;
+}
+
+section#blog-text.blog-lists about-author>picture img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  section#blog-text.blog-lists about-author>picture img {
+    margin-bottom: 15px;
+  }
+}
+
+section#blog-text.blog-lists about-author h3 {
+  color: var(--white);
+}
+
+section#blog-text.blog-lists about-author strong {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  section#blog-text.blog-lists about-author:after {
+    right: 0%;
+    left: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  section#blog-text.blog-lists about-author {
+    grid-template: auto/auto;
+    text-align: center;
+    justify-items: center;
+  }
+}

@@ -1,0 +1,22 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/blog-hero-bg.jpg') 1x, url('../../images/blog-hero-bg.webp') 1x, url('../../images/blog-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/blog-hero-bg.jpg') 1x, url('../../images/blog-hero-bg.webp') 1x, url('../../images/blog-hero-bg.avif') 1x);
+}
+
+section#articles {
+  display: grid;
+  gap: 65px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#articles section {
+  display: grid;
+  gap: 50px 35px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  section#articles section {
+    grid-template-columns: 1fr;
+  }
+}

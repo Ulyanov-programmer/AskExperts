@@ -1,0 +1,39 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/licenses-hero-bg.jpg') 1x, url('../../images/licenses-hero-bg.webp') 1x, url('../../images/licenses-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/licenses-hero-bg.jpg') 1x, url('../../images/licenses-hero-bg.webp') 1x, url('../../images/licenses-hero-bg.avif') 1x);
+}
+
+section#licenses {
+  display: grid;
+  gap: clamp(40px, calc(80 * 100vw / 1440), 80px);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  padding-bottom: 0;
+}
+
+section#licenses article {
+  display: grid;
+  grid-template: auto/300px 1fr;
+  gap: 100px;
+}
+
+section#licenses article section {
+  display: grid;
+  gap: 20px;
+}
+
+section#licenses article section hgroup h4 small {
+  font-weight: 400;
+  font-size: clamp(16px, calc(30 * 100vw / 1440), 30px);
+}
+
+section#licenses article section hgroup h4 small:before {
+  content: ': ';
+}
+
+@media (max-width: 1440px) {
+  section#licenses article {
+    grid-template: auto/auto;
+    gap: 20px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,8 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/changelog-hero-bg.jpg') 1x, url('../../images/changelog-hero-bg.webp') 1x, url('../../images/changelog-hero-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/changelog-hero-bg.jpg') 1x, url('../../images/changelog-hero-bg.webp') 1x, url('../../images/changelog-hero-bg.avif') 1x);
+}
+
+section#get-log {
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}

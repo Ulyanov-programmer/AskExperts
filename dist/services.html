@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--? ↓ Disables forced link for phone number on iOS -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="description">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="mask-icon" href="./images/favicon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="./fonts/Lato-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Cabin-VariableFont_wdth,wght.woff2" as="font" type="font/woff2">
+
+  <title>Services</title>
+
+  <!-- General stylesheets -->
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+
+  <script type="importmap">
+    {
+        "imports": {
+          "inputmask": "./assets/inputmask/inputmask.es6.js",
+          "just-validate": "./assets/justValidate/just-validate.production.min.js",
+          "nouislider": "./assets/noUiSlider/index.js",
+          "photoswipe-lightbox": "./assets/photoswipe/photoswipe-lightbox.esm.min.js",
+          "photoswipe": "./assets/photoswipe/photoswipe.esm.min.js",
+          "swiper": "./assets/swiper/swiper-bundle.min.mjs",
+          "typed": "./assets/typed/typed.min.js",
+          "mouseParallax": "./scripts/mouseParallax/parallax.src.ts",
+          "observerTools": "./scripts/observerTools/index.ts",
+          "stepByStepBlock": "./scripts/stepByStepBlock/stepByStepBlock.src.js",
+          "toggleBySwipe": "./scripts/toggleBySwipe/swipe.src.ts"
+        }
+      }
+    </script>
+
+  <link rel="stylesheet" href="./styles/layouts/components/header.css">
+  <link rel="stylesheet" href="./styles/layouts/components/footer.css">
+  <link rel="stylesheet" href="./styles/layouts/services.css">
+  <link rel="stylesheet" href="./scripts/dialogs/index.css">
+  <script type="module" src="./scripts/dialogs/index.js"></script>
+  <script type="module" src="./scripts/validateContactForm.js"></script>
+
+</head>
+
+<body>
+  <header id="header">
+    <header-top>
+      <address> Monday - Friday 8AM - 9PM </address>
+      <address> 725 Park Ave, New York </address>
+      <socials-block>
+        <a href="#" target="_self" rel="noreferrer" title="Instagram">
+          <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Facebook">
+          <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Twitter">
+          <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="LinkedIn">
+          <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+        </a>
+      </socials-block>
+    </header-top>
+    <header-bottom>
+      <picture>
+        <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+        <img src="images/logo.svg" alt="logo" width="183" height="34">
+      </picture>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" target="_self" rel="noopener" href="./index.html"> Home </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./about.html"> About </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./services.html"> Services </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Pages.html"> Pages </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="tel:+8884521505">
+        <span> + (888) 452 1505 </span>
+      </a>
+      <button id="burgerButton" data-open-dialog-id="burger-menu" type="button" title="Open the burger menu">
+        <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+          </rect>
+          <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+          </rect>
+          <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+          </rect>
+        </svg>
+      </button>
+      <dialog id="burger-menu" data-modal-dialog="">
+        <nav>
+          <button data-close-dialog-id="burger-menu" type="button" title="Close the burger menu">
+            <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+              </rect>
+              <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+              </rect>
+              <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+              </rect>
+            </svg>
+          </button>
+          <ul>
+            <li>
+              <address> Monday - Friday 8AM - 9PM </address>
+            </li>
+            <li>
+              <address> 725 Park Ave, New York </address>
+            </li>
+            <li>
+              <a class="active" target="_self" rel="noopener" href="#"> Home </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./about.html"> About </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./services.html"> Services </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="#"> Pages </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </dialog>
+    </header-bottom>
+  </header>
+
+  <main>
+
+    <section id="hero">
+      <div>
+        <highlighted-text class="yellow"> Services </highlighted-text>
+        <h1>Creative Services For Boost Your Business Growth</h1>
+      </div>
+    </section>
+    <section id="services">
+      <header-section centered="">
+        <highlighted-text class="green"> Services </highlighted-text>
+        <h2>Get Control Over Your Business I take your finance to next level</h2>
+      </header-section>
+      <services-container>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+        <service-block>
+          <img src="./images/icons/stat_circle.svg" alt="" width="99" height="91">
+          <strong> Audit & Evaluation </strong>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced
+            experience on growth and business scaling.
+          </p>
+        </service-block>
+      </services-container>
+    </section>
+    <section id="development">
+      <image-block>
+
+        <picture>
+
+          <source srcset="./images/development-bg.avif" type="image/avif">
+
+          <source srcset="./images/development-bg.webp" type="image/webp">
+          <img class="" src="./images/development-bg.png" loading="lazy" alt="" width="1478" height="960">
+        </picture>
+
+      </image-block>
+      <text-block>
+        <header-section>
+          <highlighted-text class="yellow"> Process </highlighted-text>
+          <h2>Our Consuting Service Development</h2>
+        </header-section>
+        <ul>
+          <three-section-block role="listitem">
+            <img src="./images/icons/wallet.svg" loading="lazy" alt="" width="30" height="26">
+            <strong> Banking and Finance </strong>
+            <p>
+              Professionally fashion wireless leadership rather than prospective
+              experiences my cardinate clicks-and-mortar testing whereas.
+            </p>
+          </three-section-block>
+          <three-section-block role="listitem">
+            <img src="./images/icons/wallet.svg" loading="lazy" alt="" width="30" height="26">
+            <strong> Banking and Finance </strong>
+            <p>
+              Professionally fashion wireless leadership rather than prospective
+              experiences my cardinate clicks-and-mortar testing whereas.
+            </p>
+          </three-section-block>
+          <three-section-block role="listitem">
+            <img src="./images/icons/wallet.svg" loading="lazy" alt="" width="30" height="26">
+            <strong> Banking and Finance </strong>
+            <p>
+              Professionally fashion wireless leadership rather than prospective
+              experiences my cardinate clicks-and-mortar testing whereas.
+            </p>
+          </three-section-block>
+        </ul>
+      </text-block>
+    </section>
+    <section id="pricing">
+      <header-section centered="">
+        <highlighted-text class="green"> Pricing </highlighted-text>
+        <h2>Our Pricing Plan</h2>
+      </header-section>
+      <prices-block>
+        <pricing-card>
+          <header>
+            <strong> Basic Plan </strong>
+            <p>The argument in favor of using to filler text goes something.</p>
+            <price-block>
+              <strong> $35 </strong>
+              <highlighted-text class="gray"> Monthly </highlighted-text>
+            </price-block>
+          </header>
+          <ul>
+            <li>24/7 system monitoring</li>
+            <li>Security management</li>
+            <li>24/7 system monitoring</li>
+          </ul>
+          <a class="likeButton white-to-yellow" href="#" target="_blank" rel="noopener noreferrer">
+            Get This Plan
+          </a>
+        </pricing-card>
+        <pricing-card>
+          <header>
+            <strong> Basic Plan </strong>
+            <p>The argument in favor of using to filler text goes something.</p>
+            <price-block>
+              <strong> $35 </strong>
+              <highlighted-text class="gray"> Monthly </highlighted-text>
+            </price-block>
+          </header>
+          <ul>
+            <li>24/7 system monitoring</li>
+            <li>Security management</li>
+            <li>24/7 system monitoring</li>
+          </ul>
+          <a class="likeButton white-to-yellow" href="#" target="_blank" rel="noopener noreferrer">
+            Get This Plan
+          </a>
+        </pricing-card>
+        <pricing-card>
+          <header>
+            <strong> Basic Plan </strong>
+            <p>The argument in favor of using to filler text goes something.</p>
+            <price-block>
+              <strong> $35 </strong>
+              <highlighted-text class="gray"> Monthly </highlighted-text>
+            </price-block>
+          </header>
+          <ul>
+            <li>24/7 system monitoring</li>
+            <li>Security management</li>
+            <li>24/7 system monitoring</li>
+          </ul>
+          <a class="likeButton white-to-yellow" href="#" target="_blank" rel="noopener noreferrer">
+            Get This Plan
+          </a>
+        </pricing-card>
+      </prices-block>
+    </section>
+    <section id="contact">
+      <text-block>
+        <header-section>
+          <highlighted-text class="yellow"> Proccess </highlighted-text>
+          <h2>Contact Us. It’s Easy.</h2>
+          <p>
+            Leverage agile frameworks to provide a robust synopsis for high level
+            overviews. Iterative approaches to corporate strategy foster
+            collaborative.
+          </p>
+        </header-section>
+        <aside>
+          <ul>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/yellow_yellow-bg_tel.svg" loading="lazy" alt="" width="53" height="53">
+              <strong>
+                <a href="tel:+88005553535"> +1 800 100 900 </a>
+              </strong>
+              <p>Call Today</p>
+            </three-section-block>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/greenClocks.svg" loading="lazy" alt="" width="53" height="53">
+              <strong> 9AM - 5PM </strong>
+              <p>Monday To Friday</p>
+            </three-section-block>
+            <three-section-block role="listitem" revert="">
+              <img src="./images/icons/grayLocation.svg" loading="lazy" alt="" width="53" height="53">
+              <strong>
+                <address>195 Devonshire St Boston, MA 02110</address>
+              </strong>
+              <p>USA Office</p>
+            </three-section-block>
+          </ul>
+        </aside>
+      </text-block>
+      <form class="two-columns" action="#" id="contact">
+        <label>
+          Full Name
+          <input type="text" placeholder="John David" required="" name="contact-name">
+        </label>
+        <label>
+          Email
+          <input type="email" placeholder="consult@mail.com" required="" name="contact-mail">
+        </label>
+        <label>
+          Phone
+          <input type="tel" placeholder="+008 654 231" required="" name="contact-phone">
+        </label>
+        <label>
+          Company(optional)
+          <input type="text" placeholder="yourcompany.com" name="contact-company-site">
+        </label>
+        <label>
+          Message
+          <textarea id="contact-text" name="contact-text" placeholder="Briefly tell us about your project and your current goals. How can we help you?"></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <footer-top role="navigation">
+      <nav-block>
+        <picture>
+          <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+          <img src="images/logo.svg" loading="lazy" alt="logo" width="183" height="34">
+        </picture>
+        <socials-block class="grid">
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">
+            <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+          </a>
+        </socials-block>
+      </nav-block>
+      <nav-block>
+        <strong> Product </strong>
+        <ul>
+          <li>
+            <a href="#"> Service </a>
+          </li>
+          <li>
+            <a href="#"> FAQ </a>
+          </li>
+          <li>
+            <a href="#"> Single Service </a>
+          </li>
+          <li>
+            <a href="#"> Get Quote </a>
+          </li>
+          <li>
+            <a href="#"> Prices </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Company </strong>
+        <ul>
+          <li>
+            <a href="#"> About </a>
+          </li>
+          <li>
+            <a href="#"> News </a>
+          </li>
+          <li>
+            <a href="#"> Contacts </a>
+          </li>
+          <li>
+            <a href="#"> Testimonials </a>
+          </li>
+          <li>
+            <a href="#"> Our team </a>
+          </li>
+          <li>
+            <a href="#"> Our approach </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Address </strong>
+        <address> 1700 W Blancke St, kiyev port south USA, America </address>
+        <button class="white" type="button"> Book an Appoinment </button>
+      </nav-block>
+    </footer-top>
+    <footer-bottom>
+      <small> ©2022 Consultalk. All rights reserved </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Terms of Service </a>
+      </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Privacy Policy </a>
+      </small>
+    </footer-bottom>
+  </footer>
+</body>
+
+<!-- Made in Russia, with ❤, by Ivan Ulyanov. -->
+
+</html>

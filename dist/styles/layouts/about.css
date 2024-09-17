@@ -1,0 +1,62 @@
+section#hero {
+  background: no-repeat center / cover -webkit-image-set(url('../../images/about-bg.jpg') 1x, url('../../images/about-bg.webp') 1x, url('../../images/about-bg.avif') 1x);
+  background: no-repeat center / cover image-set(url('../../images/about-bg.jpg') 1x, url('../../images/about-bg.webp') 1x, url('../../images/about-bg.avif') 1x);
+}
+
+section#principles {
+  display: grid;
+  gap: 25px;
+  background: var(--gray);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+}
+
+section#principles advantages-blocks {
+  display: flex;
+  gap: 25px;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: start;
+}
+
+@media (min-width: 500.02px) {
+  section#principles advantages-blocks>* {
+    flex: 1 1 200px;
+    max-width: 350px
+  }
+}
+
+@media (max-width: 500px) {
+  section#principles advantages-blocks {
+    display: grid;
+    gap: 10px;
+    justify-content: initial;
+    grid-auto-flow: column;
+    /* size of the first block in this container */
+    grid-template-columns: 70%;
+    /* size of a block in this container */
+    grid-auto-columns: 70%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory
+  }
+
+  section#principles advantages-blocks>* {
+    scroll-snap-align: center;
+  }
+}
+
+section#team {
+  display: grid;
+  gap: 20px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  background: var(--gray);
+}
+
+section#team header-section {
+  margin-bottom: 15px
+}
+
+@media (min-width: 1024.02px) {
+  section#team header-section {
+    width: 60%;
+  }
+}

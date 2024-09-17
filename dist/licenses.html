@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--? ↓ Disables forced link for phone number on iOS -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="description">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="icon" href="./images/favicon.svg">
+  <link rel="mask-icon" href="./images/favicon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="./fonts/Lato-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Cabin-VariableFont_wdth,wght.woff2" as="font" type="font/woff2">
+
+  <title>Licenses</title>
+
+  <!-- General stylesheets -->
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+
+  <script type="importmap">
+    {
+        "imports": {
+          "inputmask": "./assets/inputmask/inputmask.es6.js",
+          "just-validate": "./assets/justValidate/just-validate.production.min.js",
+          "nouislider": "./assets/noUiSlider/index.js",
+          "photoswipe-lightbox": "./assets/photoswipe/photoswipe-lightbox.esm.min.js",
+          "photoswipe": "./assets/photoswipe/photoswipe.esm.min.js",
+          "swiper": "./assets/swiper/swiper-bundle.min.mjs",
+          "typed": "./assets/typed/typed.min.js",
+          "mouseParallax": "./scripts/mouseParallax/parallax.src.ts",
+          "observerTools": "./scripts/observerTools/index.ts",
+          "stepByStepBlock": "./scripts/stepByStepBlock/stepByStepBlock.src.js",
+          "toggleBySwipe": "./scripts/toggleBySwipe/swipe.src.ts"
+        }
+      }
+    </script>
+
+  <link rel="stylesheet" href="./styles/layouts/components/header.css">
+  <link rel="stylesheet" href="./styles/layouts/components/footer.css">
+  <link rel="stylesheet" href="./styles/layouts/licenses.css">
+  <link rel="stylesheet" href="./scripts/dialogs/index.css">
+  <script type="module" src="./scripts/dialogs/index.js"></script>
+
+</head>
+
+<body>
+  <header id="header">
+    <header-top>
+      <address> Monday - Friday 8AM - 9PM </address>
+      <address> 725 Park Ave, New York </address>
+      <socials-block>
+        <a href="#" target="_self" rel="noreferrer" title="Instagram">
+          <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Facebook">
+          <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="Twitter">
+          <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+        </a>
+        <a href="#" target="_self" rel="noreferrer" title="LinkedIn">
+          <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+        </a>
+      </socials-block>
+    </header-top>
+    <header-bottom>
+      <picture>
+        <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+        <img src="images/logo.svg" alt="logo" width="183" height="34">
+      </picture>
+      <nav>
+        <ul>
+          <li>
+            <a class="active" target="_self" rel="noopener" href="./index.html"> Home </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./about.html"> About </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./services.html"> Services </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./Pages.html"> Pages </a>
+          </li>
+          <li>
+            <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="tel:+8884521505">
+        <span> + (888) 452 1505 </span>
+      </a>
+      <button id="burgerButton" data-open-dialog-id="burger-menu" type="button" title="Open the burger menu">
+        <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+          </rect>
+          <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+          </rect>
+          <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+          </rect>
+        </svg>
+      </button>
+      <dialog id="burger-menu" data-modal-dialog="">
+        <nav>
+          <button data-close-dialog-id="burger-menu" type="button" title="Close the burger menu">
+            <svg width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <rect class="rectTop" width="40" height="3" x="0%" y="0%" fill="gray">
+              </rect>
+              <rect class="rectCenter" width="40" height="3" x="0%" y="45%" fill="gray">
+              </rect>
+              <rect class="rectBottom" width="40" height="3" x="0%" y="90%" fill="gray">
+              </rect>
+            </svg>
+          </button>
+          <ul>
+            <li>
+              <address> Monday - Friday 8AM - 9PM </address>
+            </li>
+            <li>
+              <address> 725 Park Ave, New York </address>
+            </li>
+            <li>
+              <a class="active" target="_self" rel="noopener" href="#"> Home </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./about.html"> About </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./services.html"> Services </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./Team.html"> Team </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="#"> Pages </a>
+            </li>
+            <li>
+              <a target="_self" rel="noopener" href="./contact.html"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </dialog>
+    </header-bottom>
+  </header>
+
+  <main>
+
+    <section id="hero">
+      <div>
+        <highlighted-text class="yellow"> Licenses </highlighted-text>
+        <h2> All asset's Licenses </h2>
+      </div>
+    </section>
+    <section id="licenses">
+      <article>
+        <h3> Icon & Graphics </h3>
+        <section>
+          <p> All graphical assets in this template are licensed for personal and commercial use. If you'd like to use a specific asset, please check the license below. <br> <br> The iconography used in this Template are licensed for free personal and commercial use. If you'd like to use any specific Icon, you can check the licenses and download the images for free on phosphoricons. </p>
+          <hgroup>
+            <h4> Phosphor Icon <small> Licenses </small>
+            </h4>
+          </hgroup>
+        </section>
+      </article>
+      <article>
+        <h3> Photography </h3>
+        <section>
+          <hgroup>
+            <h4> Pexels <small> Licenses </small>
+            </h4>
+          </hgroup>
+          <p> Image 1, Image 2, Image 3, Image 4, Image 5, Image 6, Image 7, Image 8, Image 9, Image 10 </p>
+          <hgroup>
+            <h4> Unsplash <small> Licenses </small>
+            </h4>
+          </hgroup>
+          <p> Image 1, Image 2, Image 3, Image 4, Image 5, Image 6, Image 7, Image 8, Image 9, Image 10 </p>
+        </section>
+      </article>
+    </section>
+    <section id="subscribe">
+      <header-section>
+        <h2> Subscribe Our Newsletter </h2>
+        <p> Build stronger Customer Relationships with Consultalk </p>
+      </header-section>
+      <form action="#">
+        <input type="email" placeholder="Your E-Mail" required="" name="user-email">
+        <button class="yellow big" type="submit"> Submit </button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <footer-top role="navigation">
+      <nav-block>
+        <picture>
+          <source srcset="images/favicon.svg" media="(max-width: 1240px)">
+          <img src="images/logo.svg" loading="lazy" alt="logo" width="183" height="34">
+        </picture>
+        <socials-block class="grid">
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <img src="images/icons/Instagram.svg" alt="" width="19" height="18">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <img src="images/icons/Facebook.svg" alt="" width="21" height="20">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="Twitter">
+            <img src="images/icons/Twitter.svg" alt="" width="21" height="17">
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <img src="images/icons/Linked-In.svg" alt="" width="19" height="19">
+          </a>
+        </socials-block>
+      </nav-block>
+      <nav-block>
+        <strong> Product </strong>
+        <ul>
+          <li>
+            <a href="#"> Service </a>
+          </li>
+          <li>
+            <a href="#"> FAQ </a>
+          </li>
+          <li>
+            <a href="#"> Single Service </a>
+          </li>
+          <li>
+            <a href="#"> Get Quote </a>
+          </li>
+          <li>
+            <a href="#"> Prices </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Company </strong>
+        <ul>
+          <li>
+            <a href="#"> About </a>
+          </li>
+          <li>
+            <a href="#"> News </a>
+          </li>
+          <li>
+            <a href="#"> Contacts </a>
+          </li>
+          <li>
+            <a href="#"> Testimonials </a>
+          </li>
+          <li>
+            <a href="#"> Our team </a>
+          </li>
+          <li>
+            <a href="#"> Our approach </a>
+          </li>
+        </ul>
+      </nav-block>
+      <nav-block>
+        <strong> Address </strong>
+        <address> 1700 W Blancke St, kiyev port south USA, America </address>
+        <button class="white" type="button"> Book an Appoinment </button>
+      </nav-block>
+    </footer-top>
+    <footer-bottom>
+      <small> ©2022 Consultalk. All rights reserved </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Terms of Service </a>
+      </small>
+      <small>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Privacy Policy </a>
+      </small>
+    </footer-bottom>
+  </footer>
+</body>
+
+<!-- Made in Russia, with ❤, by Ivan Ulyanov. -->
+
+</html>
