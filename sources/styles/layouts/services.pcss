@@ -1,0 +1,448 @@
+section#hero {
+  background: no-repeat center right / cover url('../../images/services-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Services';
+    }
+    h1 {
+      --text: 'Creative Services For Boost Your Business Growth';
+    }
+  }
+}
+section#services {
+  header-section[centered] {
+    highlighted-text.green {
+      --text: 'Services';
+    }
+
+    h2 {
+      --text: 'Get Control Over Your Business I take your finance to next level';
+    }
+  }
+
+  services-container {
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+  }
+}
+section#development {
+  display: grid(clamp(35px, pxToVw(85), 85px)) @1024 flex(35px, column nowrap);
+  grid-template-columns: 1.2fr 0.8fr @1650 1fr;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  max-width: @1024 650px;
+  margin: @1024 auto;
+
+  image-block {
+    display: grid;
+    align-items: center;
+
+    x-img {
+      --attr-source: './images/development-bg.png';
+      --attrs: "loading='lazy' webp avif";
+    }
+
+    > picture img {
+      max-height: 400px;
+      size: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  text-block {
+    display: grid(40px);
+    max-width: @1650 550px;
+    margin: @1650 auto;
+
+    header-section {
+      highlighted-text.yellow {
+        --text: 'Process';
+      }
+      h2 {
+        --text: 'Our Consuting Service Development';
+      }
+    }
+
+    ul {
+      display: grid(40px);
+
+      three-section-block[role='listitem'] {
+        img {
+          --attr-src: './images/icons/wallet.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+        strong {
+          --text: 'Banking and Finance';
+        }
+        p {
+          --text: 'Professionally fashion wireless leadership rather than prospective experiences my cardinate clicks-and-mortar testing whereas.';
+        }
+      }
+      three-section-block[role='listitem'] {
+        img {
+          --attr-src: './images/icons/wallet.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+        strong {
+          --text: 'Banking and Finance';
+        }
+        p {
+          --text: 'Professionally fashion wireless leadership rather than prospective experiences my cardinate clicks-and-mortar testing whereas.';
+        }
+      }
+      three-section-block[role='listitem'] {
+        img {
+          --attr-src: './images/icons/wallet.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+        strong {
+          --text: 'Banking and Finance';
+        }
+        p {
+          --text: 'Professionally fashion wireless leadership rather than prospective experiences my cardinate clicks-and-mortar testing whereas.';
+        }
+      }
+    }
+  }
+}
+section#pricing {
+  display: grid(40px);
+  background: var(--gray);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  header-section[centered] {
+    highlighted-text.green {
+      --text: 'Pricing';
+    }
+    h2 {
+      --text: 'Our Pricing Plan';
+    }
+  }
+
+  prices-block {
+    display: flex(50px, row wrap);
+    justify-content: @(width > 768px) center;
+    gap: @550 15px;
+    grid-template-columns: @550 85% @426 90%;
+    grid-auto-columns: @550 85% @426 90%;
+
+    > * {
+      flex: 0 1 310px;
+    }
+
+    pricing-card {
+      header {
+        strong {
+          --text: 'Basic Plan';
+        }
+        p {
+          --text: 'The argument in favor of using to filler text goes something.';
+        }
+        price-block {
+          strong {
+            --text: '$35';
+          }
+          highlighted-text.gray {
+            --text: 'Monthly';
+          }
+        }
+      }
+      ul {
+        li {
+          --text: '24/7 system monitoring';
+        }
+        li {
+          --text: 'Security management';
+        }
+        li {
+          --text: '24/7 system monitoring';
+        }
+      }
+      a.likeButton.white-to-yellow {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Get This Plan';
+      }
+    }
+    pricing-card {
+      header {
+        strong {
+          --text: 'Basic Plan';
+        }
+        p {
+          --text: 'The argument in favor of using to filler text goes something.';
+        }
+        price-block {
+          strong {
+            --text: '$35';
+          }
+          highlighted-text.gray {
+            --text: 'Monthly';
+          }
+        }
+      }
+      ul {
+        li {
+          --text: '24/7 system monitoring';
+        }
+        li {
+          --text: 'Security management';
+        }
+        li {
+          --text: '24/7 system monitoring';
+        }
+      }
+      a.likeButton.white-to-yellow {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Get This Plan';
+      }
+    }
+    pricing-card {
+      header {
+        strong {
+          --text: 'Basic Plan';
+        }
+        p {
+          --text: 'The argument in favor of using to filler text goes something.';
+        }
+        price-block {
+          strong {
+            --text: '$35';
+          }
+          highlighted-text.gray {
+            --text: 'Monthly';
+          }
+        }
+      }
+      ul {
+        li {
+          --text: '24/7 system monitoring';
+        }
+        li {
+          --text: 'Security management';
+        }
+        li {
+          --text: '24/7 system monitoring';
+        }
+      }
+      a.likeButton.white-to-yellow {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Get This Plan';
+      }
+    }
+
+    @media (width <= 769px) {
+      display: grid;
+      gap: 30px;
+      grid-auto-flow: column;
+      /* size of the first block in this container */
+      grid-template-columns: 65%;
+      /* size of a block in this container */
+      grid-auto-columns: 65%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      > * {
+        scroll-snap-align: center;
+      }
+    }
+  }
+}
+section#contact {
+  text-block {
+    header-section {
+      highlighted-text.yellow {
+        --text: 'Proccess';
+      }
+      h2 {
+        --text: 'Contact Us. It’s Easy.';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.';
+      }
+    }
+
+    aside {
+      ul {
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/yellow_yellow-bg_tel.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            a {
+              --attr-href: 'tel:+88005553535';
+              --text: '+1 800 100 900';
+            }
+          }
+          p {
+            --text: 'Call Today';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/greenClocks.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            --text: '9AM - 5PM';
+          }
+          p {
+            --text: 'Monday To Friday';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/grayLocation.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            address {
+              --text: '195 Devonshire St Boston, MA 02110';
+            }
+          }
+          p {
+            --text: 'USA Office';
+          }
+        }
+      }
+    }
+  }
+
+  form[action='#'].two-columns {
+    label {
+      --text: 'Full Name';
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'John David';
+        --attrs: "required name='contact-name'";
+      }
+    }
+    label {
+      --text: 'Email';
+
+      input {
+        --attr-type: 'email';
+        --attr-placeholder: 'consult@mail.com';
+        --attrs: "required name='contact-mail'";
+      }
+    }
+    label {
+      --text: 'Phone';
+
+      input {
+        --attr-type: 'tel';
+        --attr-placeholder: '+008 654 231';
+        --attrs: "required name='contact-phone'";
+      }
+    }
+    label {
+      --text: 'Company(optional)';
+
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'yourcompany.com';
+        --attrs: "name='contact-company-site'";
+      }
+    }
+    label {
+      --text: 'Message';
+
+      textarea#contact-text {
+        --attr-name: 'contact-text';
+        --attr-placeholder: 'Briefly tell us about your project and your current goals. How can we help you?';
+      }
+    }
+
+    button {
+      --attr-type: 'submit';
+      --text: 'Send Message';
+    }
+  }
+}

@@ -1,0 +1,417 @@
+section#hero {
+  background: no-repeat center right / cover
+    url('../../images/service-single-hero-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Service sINGLE';
+    }
+    h1 {
+      --text: 'Services Details';
+    }
+  }
+}
+section#financial-projections {
+  display: grid;
+  gap: clamp(30px, pxToVw(70), 70px);
+  background: var(--gray);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  three-section-block {
+    header-section {
+      img {
+        --attr-src: './images/icons/stat_desc.svg';
+        --attrs: "loading='lazy' alt=''";
+      }
+
+      h2 {
+        --text: 'Financial Projections';
+      }
+      p {
+        --text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+      }
+    }
+    buttons-block {
+      button.advantages-prev {
+        --attr-type: 'button';
+        --attr-title: 'prev';
+
+        img {
+          --attr-src: './images/icons/toLeft.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+      }
+      button.advantages-next {
+        --attr-type: 'button';
+        --attr-title: 'next';
+
+        img {
+          --attr-src: './images/icons/yellowToRight.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+      }
+    }
+  }
+  .swiper#advantages-slider {
+    max-width: 100%;
+    .swiper-wrapper {
+      .swiper-slide {
+        small-advantages-block[hover-to-black] {
+          svg {
+            --attrs: 'width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"';
+            path {
+              --attrs: 'd="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818"';
+            }
+          }
+
+          strong {
+            --text: 'Income Statement';
+          }
+          p {
+            --text: 'The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)';
+          }
+        }
+      }
+      .swiper-slide {
+        small-advantages-block[hover-to-black] {
+          svg {
+            --attrs: 'width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"';
+            path {
+              --attrs: 'd="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818"';
+            }
+          }
+
+          strong {
+            --text: 'Income Statement';
+          }
+          p {
+            --text: 'The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)';
+          }
+        }
+      }
+      .swiper-slide {
+        small-advantages-block[hover-to-black] {
+          svg {
+            --attrs: 'width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"';
+            path {
+              --attrs: 'd="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818"';
+            }
+          }
+
+          strong {
+            --text: 'Income Statement';
+          }
+          p {
+            --text: 'The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)';
+          }
+        }
+      }
+      .swiper-slide {
+        small-advantages-block[hover-to-black] {
+          svg {
+            --attrs: 'width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"';
+            path {
+              --attrs: 'd="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818"';
+            }
+          }
+
+          strong {
+            --text: 'Income Statement';
+          }
+          p {
+            --text: 'The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)';
+          }
+        }
+      }
+      .swiper-slide {
+        small-advantages-block[hover-to-black] {
+          svg {
+            --attrs: 'width="38" height="27" viewBox="0 0 38 27" fill="none" xmlns="http://www.w3.org/2000/svg"';
+            path {
+              --attrs: 'd="M35.2857 0.0632324H2.71429C1.99441 0.0632324 1.30402 0.337331 0.794996 0.825231C0.285968 1.31313 0 1.97486 0 2.66486V8.01445V23.4616C0 24.1516 0.285968 24.8133 0.794996 25.3012C1.30402 25.7891 1.99441 26.0632 2.71429 26.0632H35.2857C36.0056 26.0632 36.696 25.7891 37.205 25.3012C37.714 24.8133 38 24.1516 38 23.4616V2.66486C38 1.97486 37.714 1.31313 37.205 0.825231C36.696 0.337331 36.0056 0.0632324 35.2857 0.0632324ZM20.3571 20.8762H17.6429C17.2829 20.8762 16.9377 20.7392 16.6832 20.4952C16.4287 20.2513 16.2857 19.9204 16.2857 19.5754C16.2857 19.2304 16.4287 18.8996 16.6832 18.6556C16.9377 18.4117 17.2829 18.2746 17.6429 18.2746H20.3571C20.7171 18.2746 21.0623 18.4117 21.3168 18.6556C21.5713 18.8996 21.7143 19.2304 21.7143 19.5754C21.7143 19.9204 21.5713 20.2513 21.3168 20.4952C21.0623 20.7392 20.7171 20.8762 20.3571 20.8762ZM31.2143 20.8762H25.7857C25.4258 20.8762 25.0806 20.7392 24.8261 20.4952C24.5716 20.2513 24.4286 19.9204 24.4286 19.5754C24.4286 19.2304 24.5716 18.8996 24.8261 18.6556C25.0806 18.4117 25.4258 18.2746 25.7857 18.2746H31.2143C31.5742 18.2746 31.9194 18.4117 32.1739 18.6556C32.4284 18.8996 32.5714 19.2304 32.5714 19.5754C32.5714 19.9204 32.4284 20.2513 32.1739 20.4952C31.9194 20.7392 31.5742 20.8762 31.2143 20.8762ZM2.71429 6.71364V2.66486H35.2857V6.71364H2.71429Z" fill="#181818"';
+            }
+          }
+
+          strong {
+            --text: 'Income Statement';
+          }
+          p {
+            --text: 'The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.) The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)';
+          }
+        }
+      }
+    }
+  }
+}
+section#vision {
+  padding-bottom: 50px;
+
+  images-block.decorated-image-small {
+    x-img {
+      --attr-source: './images/exept-decor.jpg';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+  }
+  text-block {
+    header-section {
+      highlighted-text.yellow {
+        --text: "WE'LL WORK WITH YOU";
+      }
+      h2 {
+        --text: 'What To Expect';
+      }
+      p {
+        --text: 'Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.';
+      }
+    }
+
+    ul {
+      li {
+        p {
+          --text: 'Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day.';
+        }
+      }
+      li {
+        p {
+          --text: 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.';
+        }
+      }
+    }
+  }
+}
+infinite-scroll#clients-line {
+  --duration: 30s @426 20s;
+  --gap: clamp(40px, pxToVw(130), 130px);
+
+  padding-block: 50px;
+  align-content: center;
+
+  img {
+    --attrs: 'src="./images/clients/1.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/2.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/3.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/4.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/5.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/6.svg" alt=""';
+  }
+}
+section#video-block.black {
+  header-section[centered] {
+    highlighted-text.green {
+      --text: 'Our History';
+    }
+    h2 {
+      --text: "Strategy for Every Stage in the Client's Journey";
+    }
+  }
+
+  play-area {
+    background: no-repeat center / contain
+      bgImageMultiType('../../images/strategy.png');
+
+    button {
+      --attr-type: 'button';
+      --attr-title: 'Play the video';
+      --attr-data-open-dialog-id: 'history-video';
+
+      svg {
+        --attrs: 'width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg"';
+
+        circle {
+          --attrs: 'cx="54.5" cy="54.5" r="54.5" fill="white" fill-opacity="0.08"';
+        }
+        circle {
+          --attrs: 'cx="54.5" cy="54.5" r="54.35" stroke="white" stroke-opacity="0.42" stroke-width="0.3"';
+        }
+        circle {
+          --attrs: 'cx="54.5" cy="54.5" r="43.35" fill="white" fill-opacity="0.17" stroke="#D0D0D0" stroke-width="0.3"';
+        }
+        circle.main-circle {
+          --attrs: 'cx="54.5" cy="54.5" r="33.5" fill="white"';
+        }
+        path {
+          --attrs: 'd="M51.0194 62.7189L59.6309 55.4472C59.7696 55.33 59.881 55.1846 59.9574 55.021C60.0337 54.8574 60.0732 54.6795 60.0732 54.4994C60.0732 54.3193 60.0337 54.1414 59.9574 53.9778C59.881 53.8142 59.7696 53.6688 59.6309 53.5516L51.0194 46.2799C50.1974 45.5859 48.9277 46.1613 48.9277 47.2278V61.7731C48.9277 62.8396 50.1974 63.4149 51.0194 62.7189Z" fill="#3B3A5D"';
+        }
+      }
+    }
+  }
+
+  dialog#history-video[data-modal-dialog] {
+    div {
+      span {
+        --text: 'Your video could be here';
+      }
+    }
+  }
+}
+section#contact {
+  text-block {
+    header-section {
+      highlighted-text.yellow {
+        --text: 'Proccess';
+      }
+      h2 {
+        --text: 'Contact Us. It’s Easy.';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.';
+      }
+    }
+
+    aside {
+      ul {
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/yellow_yellow-bg_tel.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            a {
+              --attr-href: 'tel:+88005553535';
+              --text: '+1 800 100 900';
+            }
+          }
+          p {
+            --text: 'Call Today';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/greenClocks.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            --text: '9AM - 5PM';
+          }
+          p {
+            --text: 'Monday To Friday';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/grayLocation.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            address {
+              --text: '195 Devonshire St Boston, MA 02110';
+            }
+          }
+          p {
+            --text: 'USA Office';
+          }
+        }
+      }
+    }
+  }
+  images-block {
+    x-img {
+      --attr-source: './images/contact-us-decor.png';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+  }
+}
+section#FAQ {
+  margin-inline: var(--content-inline-padding);
+  padding-bottom: var(--content-block-padding);
+
+  div {
+    display: grid;
+    gap: 40px;
+    background: var(--gray);
+    padding-block: clamp(40px, pxToVw(150), 150px);
+    padding-inline: clamp(30px, pxToVw(200), 200px) @426 25px;
+    border-radius: 30px;
+
+    header-section[centered] {
+      highlighted-text.green {
+        --text: 'FAQ';
+      }
+      h2 {
+        --text: 'Customer Questions';
+      }
+    }
+
+    spoiler-wrapper {
+      button[data-toggle-dialog-id='spoiler'] {
+        --attr-type: 'button';
+        --text: 'What will happen when I’ve sent my application?';
+
+        svg {
+          --attrs: 'width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"';
+
+          path {
+            --attrs: 'd="M10.5685 1.63086V18.8127M19.1594 10.2218H1.97754" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+          }
+        }
+      }
+      content-block {
+        dialog#spoiler[open] {
+          p {
+            --text: 'Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.';
+          }
+        }
+      }
+    }
+    spoiler-wrapper {
+      button[data-toggle-dialog-id='spoiler2'] {
+        --attr-type: 'button';
+        --text: 'What will happen when I’ve sent my application?';
+
+        svg {
+          --attrs: 'width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"';
+
+          path {
+            --attrs: 'd="M10.5685 1.63086V18.8127M19.1594 10.2218H1.97754" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+          }
+        }
+      }
+      content-block {
+        dialog#spoiler2 {
+          p {
+            --text: 'Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.';
+          }
+        }
+      }
+    }
+    spoiler-wrapper {
+      button[data-toggle-dialog-id='spoiler3'] {
+        --attr-type: 'button';
+        --text: 'What will happen when I’ve sent my application?';
+
+        svg {
+          --attrs: 'width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"';
+
+          path {
+            --attrs: 'd="M10.5685 1.63086V18.8127M19.1594 10.2218H1.97754" stroke="#181818" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+          }
+        }
+      }
+      content-block {
+        dialog#spoiler3 {
+          p {
+            --text: 'Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.';
+          }
+        }
+      }
+    }
+  }
+}

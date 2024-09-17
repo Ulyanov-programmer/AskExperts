@@ -1,0 +1,41 @@
+@font-face {
+  font-style: normal;
+  font-weight: 100 1000;
+  src: url('../fonts/Cabin-VariableFont_wdth,wght.woff2')
+    format('woff2-variations');
+  font-family: 'Cabin';
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Lato-Bold.woff2') format('woff2');
+  font-family: 'Lato';
+  font-display: swap;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Lato-Regular.woff2') format('woff2');
+  font-family: 'Lato';
+  font-display: swap;
+}
+:root {
+  --cabin: 'Cabin';
+  --lato: 'Lato';
+}
+.Cabin {
+  font-family: var(--cabin);
+  font-weight: 100 1000;
+  font-style: normal;
+}
+.Lato-700 {
+  font-family: var(--lato);
+  font-weight: 700;
+  font-style: normal;
+}
+.Lato-400 {
+  font-family: var(--lato);
+  font-weight: 400;
+  font-style: normal;
+}

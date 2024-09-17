@@ -1,0 +1,313 @@
+<x-layout page_title="About">
+  <push name="additional_code_in_head">
+    <link rel="stylesheet" href="./styles/layouts/components/header.css" />
+    <link rel="stylesheet" href="./styles/layouts/components/footer.css" />
+    <link rel="stylesheet" href="./styles/layouts/index.css" />
+    <link rel="stylesheet" href="./styles/layouts/about.css" />
+    <link rel="stylesheet" href="./scripts/dialogs/index.css" />
+    <script type="module" src="./scripts/dialogs/index.js"></script>
+  </push>
+  <section id="hero">
+    <div>
+      <highlighted-text class="yellow"> Services </highlighted-text>
+      <h1>Creative Services For Boost Your Business Growth</h1>
+    </div>
+  </section>
+  <section id="vision">
+    <text-block>
+      <header-section>
+        <highlighted-text class="green"> OUR VISION </highlighted-text>
+        <h2>Turn your ideas into reality.</h2>
+        <p>
+          Capitalize on low hanging fruit to identify a ballpark value added
+          activity beta test. Override the digital divide with additional from
+          DevOps.
+        </p>
+      </header-section>
+      <ul>
+        <li>
+          <p>
+            Bring to the table win-win survival strategies to ensure proactive
+            domination. At the end of the day.
+          </p>
+        </li>
+        <li>
+          <p>
+            Capitalize on low hanging fruit to identify a ballpark value added
+            activity to beta test override the digital.
+          </p>
+        </li>
+      </ul>
+    </text-block>
+    <images-block class="decorated-image-small-right">
+      <x-img source="./images/vision.png" loading="lazy" alt="" webp avif>
+      </x-img>
+    </images-block>
+    <advantages-row>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+    </advantages-row>
+  </section>
+  <section id="principles">
+    <three-section-block>
+      <header-section>
+        <highlighted-text class="yellow">
+          Growing with our Clients
+        </highlighted-text>
+        <h2>Our core values & principles</h2>
+        <p>
+          Capitalize on low hanging fruit to identify a ballpark value added
+          activity beta test. Override the digital divide with additional from
+          DevOps.
+        </p>
+      </header-section>
+      <button type="button">Get in touch</button>
+    </three-section-block>
+    <advantages-blocks>
+      <small-advantages-block white>
+        <img src="./images/icons/time.svg" loading="lazy" alt="" />
+        <strong> Creative Ideas </strong>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+          accumsan augue Donec aliquam.
+        </p>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Read More </a>
+      </small-advantages-block>
+      <small-advantages-block white>
+        <img src="./images/icons/time.svg" loading="lazy" alt="" />
+        <strong> Creative Ideas </strong>
+        <p>Lorem ipsum dolor</p>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Read More </a>
+      </small-advantages-block>
+      <small-advantages-block white>
+        <img src="./images/icons/time.svg" loading="lazy" alt="" />
+        <strong> Creative Ideas </strong>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+          accumsan augue Donec aliquam.
+        </p>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Read More </a>
+      </small-advantages-block>
+      <small-advantages-block white>
+        <img src="./images/icons/time.svg" loading="lazy" alt="" />
+        <strong> Creative Ideas </strong>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+          accumsan augue Donec aliquam.
+        </p>
+        <a href="#" target="_blank" rel="noopener noreferrer"> Read More </a>
+      </small-advantages-block>
+    </advantages-blocks>
+  </section>
+  <section id="video-block">
+    <header-section centered>
+      <highlighted-text class="green"> Our History </highlighted-text>
+      <h2>Better Website Means A User Experience</h2>
+      <p>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team and individual achievements.
+      </p>
+    </header-section>
+    <play-area>
+      <button
+        type="button"
+        title="Play the video"
+        data-open-dialog-id="history-video"
+      >
+        <svg
+          width="109"
+          height="109"
+          viewBox="0 0 109 109"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="54.5"
+            cy="54.5"
+            r="54.5"
+            fill="white"
+            fill-opacity="0.08"
+          ></circle>
+          <circle
+            cx="54.5"
+            cy="54.5"
+            r="54.35"
+            stroke="white"
+            stroke-opacity="0.42"
+            stroke-width="0.3"
+          ></circle>
+          <circle
+            cx="54.5"
+            cy="54.5"
+            r="43.35"
+            fill="white"
+            fill-opacity="0.17"
+            stroke="#D0D0D0"
+            stroke-width="0.3"
+          ></circle>
+          <circle
+            class="main-circle"
+            cx="54.5"
+            cy="54.5"
+            r="33.5"
+            fill="white"
+          ></circle>
+          <path
+            d="M51.0194 62.7189L59.6309 55.4472C59.7696 55.33 59.881 55.1846 59.9574 55.021C60.0337 54.8574 60.0732 54.6795 60.0732 54.4994C60.0732 54.3193 60.0337 54.1414 59.9574 53.9778C59.881 53.8142 59.7696 53.6688 59.6309 53.5516L51.0194 46.2799C50.1974 45.5859 48.9277 46.1613 48.9277 47.2278V61.7731C48.9277 62.8396 50.1974 63.4149 51.0194 62.7189Z"
+            fill="#3B3A5D"
+          ></path>
+        </svg>
+      </button>
+    </play-area>
+    <dialog id="history-video" data-modal-dialog>
+      <div>
+        <span> Your video could be here </span>
+      </div>
+    </dialog>
+  </section>
+  <section id="team">
+    <header-section>
+      <highlighted-text class="yellow"> Our team </highlighted-text>
+      <h2>We champion the bold to achieve the extraordinary</h2>
+      <p>
+        Ippsum is the result of synergy between our teams and our customers. Our
+        company culture is focused on excellent productivity, customer
+        satisfaction, respect for team.
+      </p>
+    </header-section>
+    <team-section>
+      <teammate-block>
+        <a href="./team-single.html" target="_blank" rel="noopener noreferrer">
+          <photo-block>
+            <x-img
+              source="./images/teammate.jpg"
+              loading="lazy"
+              alt=""
+              webp
+              avif
+            >
+            </x-img>
+            <strong> CEO at Company </strong>
+          </photo-block>
+        </a>
+        <strong> Sarah Jasmine </strong>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews.
+        </p>
+        <socials-block white-bg>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/icons/Facebook.svg" loading="lazy" alt="" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/icons/Instagram.svg" loading="lazy" alt="" />
+          </a>
+        </socials-block>
+      </teammate-block>
+      <teammate-block>
+        <a href="./team-single.html" target="_blank" rel="noopener noreferrer">
+          <photo-block>
+            <x-img
+              source="./images/teammate.jpg"
+              loading="lazy"
+              alt=""
+              webp
+              avif
+            >
+            </x-img>
+            <strong> CEO at Company </strong>
+          </photo-block>
+        </a>
+        <strong> Sarah Jasmine </strong>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews.
+        </p>
+        <socials-block white-bg>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/icons/Facebook.svg" loading="lazy" alt="" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/icons/Instagram.svg" loading="lazy" alt="" />
+          </a>
+        </socials-block>
+      </teammate-block>
+      <teammate-block>
+        <a href="./team-single.html" target="_blank" rel="noopener noreferrer">
+          <photo-block>
+            <x-img
+              source="./images/teammate.jpg"
+              loading="lazy"
+              alt=""
+              webp
+              avif
+            >
+            </x-img>
+            <strong> CEO at Company </strong>
+          </photo-block>
+        </a>
+        <strong> Sarah Jasmine </strong>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews.
+        </p>
+        <socials-block white-bg>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/icons/Facebook.svg" loading="lazy" alt="" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="./images/icons/Instagram.svg" loading="lazy" alt="" />
+          </a>
+        </socials-block>
+      </teammate-block>
+    </team-section>
+  </section>
+  <section id="read">
+    <content-block>
+      <highlighted-text class="green"> Book Now </highlighted-text>
+      <h2>Better Consult, Better Results</h2>
+      <p>
+        Our software development agency has a growth up to 30% per each year. If
+        you are result-oriented, not afraid to take initiative – drop us a note
+        and join our team!
+      </p>
+      <a class="likeButton yellow" href="tel:+88005553535">
+        <img src="./images/icons/yellow_tel.svg" loading="lazy" alt="" />+800
+        1234 654
+      </a>
+    </content-block>
+    <images-block>
+      <x-img
+        source="./images/read-section-bottom-img.png"
+        loading="lazy"
+        alt=""
+        webp
+        avif
+      >
+      </x-img>
+      <x-img
+        source="./images/read-section-top-img.png"
+        loading="lazy"
+        alt=""
+        webp
+        avif
+      >
+      </x-img>
+    </images-block>
+  </section>
+</x-layout>

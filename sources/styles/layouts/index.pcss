@@ -1,0 +1,1102 @@
+section#hero {
+  background: no-repeat center / cover bgImageMultiType('../../images/hero.jpg');
+
+  div {
+    h1 {
+      --text: 'Your small business <br /> growth advisors';
+    }
+
+    p {
+      --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+    }
+
+    footer {
+      button[type='button'] {
+        --text: 'Our Services';
+      }
+
+      button[type='button'].white.withIcon {
+        img {
+          --attrs: 'src="./images/notepad.svg" alt=""';
+          --text-after: 'Book a Meeting';
+        }
+      }
+    }
+  }
+}
+
+infinite-scroll#clients-line {
+  --duration: 30s @426 20s;
+  --gap: clamp(40px, pxToVw(130), 130px);
+
+  padding-block: 50px;
+  align-content: center;
+
+  img {
+    --attrs: 'src="./images/clients/1.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/2.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/3.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/4.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/5.svg" alt=""';
+  }
+
+  img {
+    --attrs: 'src="./images/clients/6.svg" alt=""';
+  }
+}
+
+section#about-us {
+  display: grid(65px) @1100 flex(65px, column-reverse nowrap);
+  grid-template-columns: 0.8fr 1.2fr @1440 1fr 1fr;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  text-block {
+    display: flex(15px, column nowrap);
+    justify-items: start;
+    align-items: start;
+
+    highlighted-text.yellow {
+      --text: 'About us';
+    }
+
+    h2 {
+      --text: 'About our Consulting Agency Team';
+    }
+
+    strong {
+      --text: 'We create experiences and build products that make business grow';
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--black);
+      line-height: 1.4;
+    }
+
+    p {
+      --text: 'Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.';
+    }
+
+    footer {
+      display: grid;
+      gap: 20px @500 10px;
+      grid-template-columns: 1fr 1fr @500 1fr;
+      border-top: 1px solid #d8d8d8;
+      border-bottom: 1px solid #d8d8d8;
+      color: var(--black);
+      margin-top: 25px;
+      padding-block: 15px;
+      width: @1440 100%;
+
+      > :first-child {
+        position: relative;
+        margin-right: 20px @500 0px;
+
+        &:after {
+          position: absolute(0 -20px auto auto);
+          height: 100%;
+          width: 1px;
+          background: #d8d8d8;
+          display: inline-block;
+          content: '' @500 none;
+        }
+      }
+
+      advantage-block {
+        span {
+          --text: '400+';
+
+          &:nth-child(1):before {
+            content: url('../../images/icons/yellowStar.svg');
+          }
+        }
+
+        strong {
+          --text: 'Business Services';
+        }
+      }
+
+      advantage-block {
+        span {
+          --text: '100+';
+
+          &:nth-child(2):before {
+            content: url('../../images/icons/happyCustomer.svg');
+          }
+        }
+
+        strong {
+          --text: 'Happy Customers';
+        }
+      }
+    }
+  }
+
+  images-block {
+    min-height: 400px @426 250px;
+    background: no-repeat 0% 100% / 40% url('../../images/marketplace.svg'),
+      no-repeat center right / 80% url('../../images/about-us.webp'),
+      no-repeat bottom left / clamp(200px, pxToVw(327), 327px)
+        url('../../images/bgPattern.svg');
+
+    background: @1800 no-repeat top left / 50%
+        url('../../images/marketplace.svg'),
+      no-repeat top left / 100% url('../../images/about-us.webp');
+
+    background: @1100 no-repeat 0% 85% / 300px
+        url('../../images/marketplace.svg'),
+      no-repeat center / contain url('../../images/about-us.webp');
+
+    background: @426 no-repeat 0% 85% / 250px
+        url('../../images/marketplace.svg'),
+      no-repeat center / cover url('../../images/about-us.webp');
+  }
+}
+
+section#services {
+  display: grid(10px);
+  justify-items: center;
+  background: var(--gray);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  header-section[centered] {
+    highlighted-text.green {
+      --text: 'Services';
+    }
+
+    h2 {
+      --text: 'Get Control Over Your Business I take your finance to next level';
+      margin-bottom: 25px;
+      max-width: 700px;
+    }
+  }
+
+  services-container {
+    width: 100%;
+    display: grid(20px);
+    grid-template-columns:
+      repeat(auto-fit, minmax(280px, 3fr))
+      @426 85%;
+    grid-auto-columns: @426 85%;
+
+    @media (width <= 769px) {
+      grid-auto-flow: column;
+      /* size of the first block in this container */
+      grid-template-columns: 70%;
+      /* size of a block in this container */
+      grid-auto-columns: 70%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      > * {
+        scroll-snap-align: start;
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+
+    service-block {
+      img {
+        --attrs: 'src="./images/icons/stat_circle.svg" alt=""';
+      }
+
+      strong {
+        --text: 'Audit & Evaluation';
+      }
+
+      p {
+        --text: 'Get help from Alex Moore, a professional business coach with advanced  experience on growth and business scaling.';
+      }
+    }
+  }
+}
+
+section#process {
+  display: grid(65px);
+  grid-template-columns: 1fr 1.1fr @1024 1fr;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  > * {
+    align-items: @1024 center !important;
+
+    > :is(h2, strong, p) {
+      text-align: @1024 center;
+    }
+  }
+
+  process-block {
+    display: flex(15px, column nowrap);
+    align-items: start @1024 center;
+
+    highlighted-text.green {
+      --text: 'Process';
+    }
+
+    h2 {
+      --text: 'There have some easy steps to join with us!';
+    }
+
+    p {
+      --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.';
+    }
+
+    ol {
+      display: grid(30px);
+      padding-top: 30px;
+      margin-top: 30px;
+      border-top: 1px solid #c1c1c1;
+      counter-reset: process-steps;
+
+      > :not(:last-child) {
+        border-bottom: 1px solid #c1c1c1;
+        padding-bottom: 30px;
+      }
+
+      three-section-block[role='listitem'] {
+        counter-increment: process-steps;
+
+        &::before {
+          font-family: Cabin;
+          font-size: 26px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 20px;
+          content: counter(process-steps);
+        }
+
+        &:nth-child(1) {
+          &:before {
+            background: var(--yellow);
+            color: var(--black);
+          }
+        }
+
+        &:nth-child(2) {
+          &:before {
+            background: var(--green);
+            color: var(--white);
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            background: var(--black);
+            color: var(--white);
+          }
+        }
+
+        strong {
+          --text: 'Setup Account';
+        }
+        p {
+          --text: 'We understand the importance of approaching each work integrally.';
+        }
+      }
+
+      three-section-block[role='listitem'] {
+        strong {
+          --text: 'Consult with us';
+        }
+        p {
+          --text: 'Increase social reach and productivity with our App Directory, a collection.';
+        }
+      }
+      three-section-block[role='listitem'] {
+        strong {
+          --text: 'Payment & Boost';
+        }
+        p {
+          --text: 'We encourage every team member to be a whole person. We have a flexible.';
+        }
+      }
+    }
+  }
+
+  about-block {
+    display: flex(15px, column nowrap);
+    align-items: start @1024 center;
+    overflow: hidden;
+
+    highlighted-text.yellow {
+      --text: 'Growing with our clients';
+    }
+
+    h2 {
+      --text: '30 Years of Experience';
+    }
+
+    p {
+      max-width: 500px;
+      --text: 'Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.<br> <br>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.';
+    }
+
+    advantages-blocks {
+      width: 100%;
+      margin-top: 15px;
+      display: grid;
+      gap: 15px @426 10px;
+      align-items: initial;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+      @media (width <= 426px) {
+        grid-auto-flow: column;
+        /* size of the first block in this container */
+        grid-template-columns: 60%;
+        /* size of a block in this container */
+        grid-auto-columns: 50%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+
+        > * {
+          scroll-snap-align: start;
+        }
+      }
+
+      small-advantages-block {
+        img {
+          --attr-src: './images/icons/time.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+
+        strong {
+          --text: 'Consistency';
+        }
+        p {
+          --text: 'Podcasting operational change management  workflow.';
+        }
+      }
+      small-advantages-block {
+        img {
+          --attr-src: './images/icons/time.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+
+        strong {
+          --text: 'Consistency';
+        }
+        p {
+          --text: 'Podcasting operational change management  workflow.';
+        }
+      }
+      small-advantages-block {
+        img {
+          --attr-src: './images/icons/time.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+
+        strong {
+          --text: 'Consistency';
+        }
+        p {
+          --text: 'Podcasting operational change management  workflow.';
+        }
+      }
+      small-advantages-block {
+        img {
+          --attr-src: './images/icons/time.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+
+        strong {
+          --text: 'Consistency';
+        }
+        p {
+          --text: 'Podcasting operational change management  workflow.';
+        }
+      }
+    }
+  }
+}
+
+section#gallery {
+  display: grid(45px);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  background: repeat-x top center / auto 50% url('../../images/gallery-bg.svg');
+
+  header-section[three-sections] {
+    highlighted-text.green {
+      --text: 'Proccess';
+    }
+    h2 {
+      color: var(--white);
+      --text: 'Our client, global analytical techno company, wanted to build market.';
+    }
+    button.yellow {
+      --attr-type: 'button';
+      --text: 'More Gallery';
+    }
+  }
+
+  gallery-block {
+    margin-inline: @769 calc(-1 * var(--content-inline-padding));
+    border-radius: 20px;
+
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+  }
+
+  advantages-row {
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+  }
+}
+
+section#feedback {
+  display: grid(20px);
+  justify-items: center;
+  text-align: center;
+  margin: var(--content-block-padding) auto;
+  max-width: 700px;
+  margin-inline: @769 var(--content-inline-padding);
+
+  highlighted-text.green {
+    --text: 'Client Feedback';
+  }
+
+  .swiper#feedback-text {
+    max-width: 100%;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        h3 {
+          muted-text {
+            --text: 'Lorem ipsum dolor sit amet, consectetur';
+          }
+          span {
+            --text: 'adipiscing elit, sed do eiusmod';
+          }
+          muted-text {
+            --text: 'tempor incididunt ut labore et dolore';
+          }
+          &:before {
+            content: '“';
+            opacity: 0.6;
+          }
+          &:after {
+            content: '”';
+            opacity: 0.6;
+          }
+        }
+      }
+      .swiper-slide {
+        h3 {
+          muted-text {
+            --text: 'Lorem ipsum ';
+          }
+          span {
+            --text: 'elit, sed do eiusmod';
+          }
+          muted-text {
+            --text: 'tempor incididunt';
+          }
+        }
+      }
+    }
+  }
+
+  main-slider {
+    margin-top: 20px;
+    display: grid(clamp(30px, pxToVw(90), 90px));
+    align-items: center;
+    grid-template: auto / auto 1fr auto;
+
+    @media (width <= 768px) {
+      grid-template:
+        'prev next' auto
+        'slider slider' auto
+        / 1fr 1fr;
+    }
+
+    button.gray.withIcon.feedback-prev {
+      --attr-type: 'button';
+
+      justify-self: start @769 right;
+      grid-area: @769 prev;
+
+      img {
+        --attr-src: './images/icons/toLeft.svg';
+        --attrs: "loading='lazy' alt=''";
+        --text-after: 'Prev';
+      }
+    }
+
+    .swiper#feedback-slider {
+      max-width: 100%;
+      grid-area: @769 slider;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          div {
+            display: grid(15px);
+            justify-items: center;
+
+            picture {
+              border-radius: 50%;
+              aspect-ratio: 1/1;
+              max-width: 300px;
+              margin-bottom: 15px;
+
+              img {
+                --attr-src: './images/client.png';
+                --attrs: "loading='lazy' alt=''";
+                size: 100%;
+              }
+            }
+
+            small {
+              --text: 'Web Designer';
+              color: var(--green);
+              font-weight: 600;
+            }
+
+            strong {
+              font-family: Cabin;
+              font-weight: 600;
+              font-size: 20px;
+              color: var(--black);
+              --text: 'Kathleen Smith';
+            }
+          }
+        }
+        .swiper-slide {
+          div {
+            picture {
+              img {
+                --attr-src: './images/client.png';
+                --attrs: "loading='lazy' alt=''";
+              }
+            }
+
+            small {
+              --text: 'Web Designer';
+            }
+
+            strong {
+              --text: 'Kathleen Smith';
+            }
+          }
+        }
+      }
+    }
+
+    button.gray.withIcon.feedback-next {
+      --attr-type: 'button';
+      --text: 'Next';
+
+      justify-self: end @769 left;
+      grid-area: @769 next;
+
+      img {
+        --attr-src: './images/icons/yellowToRight.svg';
+        --attrs: "loading='lazy' alt=''";
+      }
+    }
+  }
+}
+
+section#read {
+  display: grid(clamp(30px, pxToVw(70), 70px));
+  grid-template-columns: 0.8fr 1fr @1024 1fr;
+  color: var(--white);
+  margin: var(--content-block-padding) var(--content-inline-padding);
+  padding-inline: clamp(30px, pxToVw(90), 90px);
+  background: var(--black);
+  border-radius: 20px;
+
+  text-align: @1024 center;
+  justify-items: @1024 center;
+
+  content-block {
+    display: flex(20px, column nowrap);
+    padding-block: clamp(50px, pxToVw(110), 110px);
+    align-items: start @1024 center;
+    max-width: @1024 400px;
+
+    highlighted-text.green {
+      --text: 'Book Now';
+    }
+    h2 {
+      --text: 'Better Consult, Better Results';
+      color: var(--white);
+    }
+
+    p {
+      --text: 'Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative – drop us a note and join our team!';
+    }
+
+    a.likeButton.yellow {
+      --attr-href: 'tel:+88005553535';
+
+      img {
+        --attr-src: './images/icons/yellow_tel.svg';
+        --attrs: "loading='lazy' alt=''";
+        --text-after: '+800 1234 654';
+        margin-right: 5px;
+      }
+    }
+
+    > a {
+      @media (hover: hover) {
+        &:hover {
+          background: var(--yellow);
+          color: var(--black);
+
+          img {
+            scale: 1.2;
+          }
+        }
+      }
+
+      img {
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  images-block {
+    display: @1024 none;
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+    background: no-repeat 0% calc(100% - 100px) / 65%
+      url('../../images/bgPattern.svg');
+
+    x-img {
+      --attr-source: './images/read-section-bottom-img.png';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+    x-img {
+      --attr-source: './images/read-section-top-img.png';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+    picture:first-child img {
+      object-fit: contain;
+      object-position: bottom center;
+      position: absolute(auto 10% 0 auto, 1);
+      width: 80% @1240 98%;
+    }
+
+    picture:last-child img {
+      object-fit: contain;
+      object-position: top right;
+      position: absolute(0 0 auto auto);
+      width: 50%;
+      right: @1240 5%;
+    }
+  }
+}
+
+section#news {
+  display: grid(25px);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  background: var(--gray);
+
+  header-section[three-sections] {
+    highlighted-text.green {
+      --text: 'Blog';
+    }
+    h2 {
+      --text: 'Take a look at our latest articles & resources';
+    }
+    a.likeButton.yellow {
+      --attr-href: './blog.html';
+      --attrs: "target='_blank' rel='noopener noreferrer'";
+      --text: 'More News';
+    }
+  }
+
+  section {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: 1fr 1fr @600 1fr;
+    container-type: inline-size;
+
+    news-item {
+      a {
+        --attr-href: './blog-single.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        x-img {
+          --attr-source: './images/news-image.jpg';
+          --attrs: "loading='lazy' alt='' webp avif";
+        }
+      }
+      h5 {
+        --text: 'Consulting Fees Study 2019 (And How To Raise Your Rates)';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.';
+      }
+      footer {
+        author-block {
+          x-img {
+            --attr-source: './images/news-author.jpg';
+            --attrs: "loading='lazy' alt='' webp avif";
+          }
+          span {
+            --text: 'John Carter';
+          }
+          span {
+            --text: 'September 1, 2022';
+          }
+        }
+        a.likeButton {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+          --text: 'Read More';
+        }
+      }
+    }
+    news-item {
+      a {
+        --attr-href: './blog-single.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        x-img {
+          --attr-source: './images/news-image.jpg';
+          --attrs: "loading='lazy' alt='' webp avif";
+        }
+      }
+      h5 {
+        --text: 'Consulting Fees Study 2019 (And How To Raise Your Rates)';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.';
+      }
+      footer {
+        author-block {
+          x-img {
+            --attr-source: './images/news-author.jpg';
+            --attrs: "loading='lazy' alt='' webp avif";
+          }
+          span {
+            --text: 'John Carter';
+          }
+          span {
+            --text: 'September 1, 2022';
+          }
+        }
+        a.likeButton {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+          --text: 'Read More';
+        }
+      }
+    }
+  }
+}
+
+section#contact {
+  text-block {
+    header-section {
+      highlighted-text.yellow {
+        --text: 'Proccess';
+      }
+      h2 {
+        --text: 'Contact Us. It’s Easy.';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.';
+      }
+    }
+
+    aside {
+      ul {
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/yellow_yellow-bg_tel.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            a {
+              --attr-href: 'tel:+88005553535';
+              --text: '+1 800 100 900';
+            }
+          }
+          p {
+            --text: 'Call Today';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/greenClocks.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            --text: '9AM - 5PM';
+          }
+          p {
+            --text: 'Monday To Friday';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/grayLocation.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            address {
+              --text: '195 Devonshire St Boston, MA 02110';
+            }
+          }
+          p {
+            --text: 'USA Office';
+          }
+        }
+      }
+    }
+  }
+
+  form[action='#'].two-columns {
+    label {
+      --text: 'Full Name';
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'John David';
+        --attrs: "required name='contact-name'";
+      }
+    }
+    label {
+      --text: 'Email';
+
+      input {
+        --attr-type: 'email';
+        --attr-placeholder: 'consult@mail.com';
+        --attrs: "required name='contact-mail'";
+      }
+    }
+    label {
+      --text: 'Phone';
+
+      input {
+        --attr-type: 'tel';
+        --attr-placeholder: '+008 654 231';
+        --attrs: "required name='contact-phone'";
+      }
+    }
+    label {
+      --text: 'Company(optional)';
+
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'yourcompany.com';
+        --attrs: "name='contact-company-site'";
+      }
+    }
+    label {
+      --text: 'Message';
+
+      textarea#contact-text {
+        --attr-name: 'contact-text';
+        --attr-placeholder: 'Briefly tell us about your project and your current goals. How can we help you?';
+        resize: none;
+      }
+    }
+
+    button {
+      --attr-type: 'submit';
+      --text: 'Send Message';
+    }
+  }
+}

@@ -1,0 +1,156 @@
+<x-layout page_title="Contact">
+  <push name="additional_code_in_head">
+    <link rel="stylesheet" href="./styles/layouts/components/header.css" />
+    <link rel="stylesheet" href="./styles/layouts/components/footer.css" />
+    <link rel="stylesheet" href="./styles/layouts/contact.css" />
+    <link rel="stylesheet" href="./scripts/dialogs/index.css" />
+    <script type="module" src="./scripts/dialogs/index.js"></script>
+    <script type="module" src="./scripts/validateContactForm.js"></script>
+  </push>
+  <section id="hero">
+    <div>
+      <highlighted-text class="yellow"> Contactus </highlighted-text>
+      <h1>Feel Free To Reach Us</h1>
+    </div>
+  </section>
+  <section id="talk">
+    <images-block class="decorated-image">
+      <x-img source="./images/talk-decor.jpg" loading="lazy" alt="" webp avif>
+      </x-img>
+    </images-block>
+    <content-block>
+      <header-section>
+        <highlighted-text class="green"> Let’s talk </highlighted-text>
+        <h2>Get In Touch With Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore.
+        </p>
+      </header-section>
+      <aside>
+        <three-section-block revert>
+          <img src="./images/icons/black_bg_tel.svg" loading="lazy" alt="" />
+          <p>Have Any Question?</p>
+          <strong>
+            Free <a href="tel:+01238543987"> +01 238 543 987 </a>
+          </strong>
+        </three-section-block>
+        <three-section-block revert>
+          <img src="./images/icons/black_bg_tel.svg" loading="lazy" alt="" />
+          <p>Write Email</p>
+          <strong>
+            <a href="mailto:Info@consultalk.com"> Info@consultalk.com </a>
+          </strong>
+        </three-section-block>
+        <three-section-block revert>
+          <img src="./images/icons/black_bg_tel.svg" loading="lazy" alt="" />
+          <p>Visit Anytime</p>
+          <strong>
+            <address>King Street, Prior Lake, New York.</address>
+          </strong>
+        </three-section-block>
+      </aside>
+    </content-block>
+  </section>
+  <section id="subscribe">
+    <header-section>
+      <h2>Subscribe Our Newsletter</h2>
+      <p>Build stronger Customer Relationships with Consultalk</p>
+    </header-section>
+    <form action="#" id="contact">
+      <input
+        type="email"
+        placeholder="Your E-Mail"
+        required
+        name="user-email"
+      />
+      <button class="yellow big" type="submit">Submit</button>
+    </form>
+  </section>
+  <section id="contact">
+    <text-block>
+      <header-section>
+        <highlighted-text class="yellow"> Proccess </highlighted-text>
+        <h2>Contact Us. It’s Easy.</h2>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. Iterative approaches to corporate strategy foster
+          collaborative.
+        </p>
+      </header-section>
+      <aside>
+        <ul>
+          <three-section-block role="listitem" revert>
+            <img
+              src="./images/icons/yellow_yellow-bg_tel.svg"
+              loading="lazy"
+              alt=""
+            />
+            <strong>
+              <a href="tel:+88005553535"> +1 800 100 900 </a>
+            </strong>
+            <p>Call Today</p>
+          </three-section-block>
+          <three-section-block role="listitem" revert>
+            <img src="./images/icons/greenClocks.svg" loading="lazy" alt="" />
+            <strong> 9AM - 5PM </strong>
+            <p>Monday To Friday</p>
+          </three-section-block>
+          <three-section-block role="listitem" revert>
+            <img src="./images/icons/grayLocation.svg" loading="lazy" alt="" />
+            <strong>
+              <address>195 Devonshire St Boston, MA 02110</address>
+            </strong>
+            <p>USA Office</p>
+          </three-section-block>
+        </ul>
+      </aside>
+    </text-block>
+    <form class="two-columns" action="#">
+      <label>
+        Full Name
+        <input
+          type="text"
+          placeholder="John David"
+          required
+          name="contact-name"
+        />
+      </label>
+      <label>
+        Email
+        <input
+          type="email"
+          placeholder="consult@mail.com"
+          required
+          name="contact-mail"
+        />
+      </label>
+      <label>
+        Phone
+        <input
+          type="tel"
+          placeholder="+008 654 231"
+          required
+          name="contact-phone"
+        />
+      </label>
+      <label>
+        Company(optional)
+        <input
+          type="text"
+          placeholder="yourcompany.com"
+          name="contact-company-site"
+        />
+      </label>
+      <label>
+        Message
+        <textarea
+          id="contact-text"
+          name="contact-text"
+          placeholder="Briefly tell us about your project and your current goals. How can we help you?"
+        ></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</x-layout>

@@ -1,0 +1,152 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/blog-single-hero-bg.jpg');
+  height: 750px;
+
+  div {
+    highlighted-text.yellow {
+      --text: 'September 1, 2022';
+    }
+    h1 {
+      --text: 'Essential Guidelines To Grow Your Corporate Business With Us';
+    }
+  }
+}
+section#blog-text.blog-lists {
+  display: grid;
+  gap: 30px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  h2 {
+    --text: 'Best Business Consulting Services';
+  }
+  p {
+    --text: 'Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring. Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps.';
+  }
+  x-img {
+    --attr-source: './images/blog-single-img.jpg';
+    --attrs: "loading='lazy' alt='' webp avif";
+  }
+  > picture img {
+    border-radius: 20px;
+    max-height: 500px;
+    object-fit: contain;
+    object-position: left;
+  }
+  h2 {
+    --text: 'The Digital Assets For All';
+  }
+  p {
+    --text: 'Appropriately empower dynamic leadership skills after business portals. Globally my carminate interactive supply chains with distinctive quality vectors global sources services. Uniquely matrix economically sound value through cooperative technology. Competently parallel task fully researched data and enterprise process improvements.';
+  }
+  ul {
+    li {
+      --text: 'Dynamically target high-payoff intellectual capital for customized';
+    }
+    li {
+      --text: 'Interactively procrastinate high-payoff content';
+    }
+    li {
+      --text: 'Credibly reinter mediate backend ideas for cross-platform models';
+    }
+  }
+  ol {
+    li {
+      --text: 'Dynamically target high-payoff intellectual capital for customized';
+    }
+    li {
+      --text: 'Interactively procrastinate high-payoff content';
+    }
+    li {
+      --text: 'Credibly reinter mediate backend ideas for cross-platform models';
+    }
+  }
+  blockquote {
+    p {
+      --text: 'The job market of the future will consist of those jobs that robots cannot perform. Our blue-collar work is pattern recognition, making sense of what you see. Gardeners will still have jobs because every garden is different.';
+    }
+  }
+
+  about-author {
+    position: relative;
+    display: grid;
+    grid-template: auto/ auto auto @768 auto / auto;
+    gap: 15px 35px;
+    background: var(--black);
+    border-radius: 30px;
+    padding: clamp(20px, pxToVw(60), 60px) clamp(20px, pxToVw(50), 50px);
+    color: var(--white);
+    overflow: hidden;
+    text-align: @768 center;
+    justify-items: @768 center;
+
+    > * {
+      z-index: 1;
+      text-shadow: 0 0 3px #000;
+    }
+
+    &:after {
+      position: absolute;
+      rotate: 45deg;
+      translate: 0 -250px;
+      top: 0;
+      right: 0 @768 0%;
+      left: @768 0%;
+      content: url('../../images/bgPattern.svg');
+    }
+
+    x-img {
+      --attr-source: './images/news-author-big.jpg';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+    > picture {
+      grid-row: span 4;
+
+      img {
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: @768 15px;
+      }
+    }
+
+    h3 {
+      --text: 'Nayra Melson';
+      color: var(--white);
+    }
+    strong {
+      --text: 'Senior Manager';
+      font-weight: 500;
+      font-size: 18px;
+    }
+    p {
+      --text: 'Leads the global expansion of the designerz brand and overseas investment in solutions and innovation. Renowned coder and an authority on matters of industrial experience & interface.';
+    }
+    socials-block {
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        img {
+          --attr-src: './images/icons/Instagram.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+      }
+
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        img {
+          --attr-src: './images/icons/Instagram.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+      }
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        img {
+          --attr-src: './images/icons/Instagram.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+      }
+    }
+  }
+}

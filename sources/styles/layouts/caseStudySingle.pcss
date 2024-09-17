@@ -1,0 +1,246 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/caseStudySingle-hero-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Case Studies single';
+    }
+    h1 {
+      --text: 'Taxes & Efficiency';
+    }
+  }
+}
+section#content {
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  image-block {
+    container-type: inline-size;
+    position: relative;
+    display: block;
+    margin-bottom: 150px;
+
+    x-img {
+      --attr-source: './images/content-image.jpg';
+      --attrs: "alt='' webp avif";
+    }
+    > picture img {
+      border-radius: 15px;
+      width: 100%;
+      min-height: 400px;
+      object-fit: cover;
+    }
+
+    info-block {
+      position: absolute;
+      inset: auto 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      background: var(--black);
+      border-radius: 30px;
+      padding: clamp(20px, pxToVw(50), 50px);
+      font-family: 'Cabin';
+      color: var(--white);
+      gap: 25px;
+      margin-inline: 10%;
+      translate: 0 50% @1024 0 20%;
+
+      @container (width < 600px) {
+        display: grid;
+        justify-items: center;
+      }
+
+      section {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 25px clamp(25px, pxToVw(100), 100px);
+
+        div {
+          display: grid;
+          gap: 10px;
+
+          strong {
+            font-size: 20px;
+            font-weight: 500;
+            --text: 'Case Name';
+          }
+          span {
+            font-size: 16px;
+            --text: 'Taxes & Efficiency';
+          }
+        }
+        div {
+          strong {
+            --text: 'Case Name';
+          }
+          span {
+            --text: 'Taxes & Efficiency';
+          }
+        }
+        div {
+          strong {
+            --text: 'Date';
+          }
+          span {
+            --text: '27th September 2022';
+          }
+        }
+      }
+      a.likeButton.yellow {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Live Preview';
+
+        white-space: nowrap;
+      }
+    }
+  }
+
+  section.blog-lists {
+    display: grid;
+    gap: 25px;
+    max-width: 800px;
+    margin: auto;
+
+    h2 {
+      --text: 'Project Overview';
+    }
+    p {
+      --text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.';
+    }
+    ul {
+      li {
+        --text: 'It brings the right people together with all the right information and tools to get work done';
+      }
+      li {
+        --text: 'It brings the right people together with all the right information and tools to get work done';
+      }
+      li {
+        --text: 'It brings the right people together with all the right information and tools to get work done';
+      }
+    }
+    h3 {
+      --text: 'Storyboard';
+    }
+    p {
+      --text: 'Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service. Objectively innovate empowered manufactured products whereas parallel platforms. Holistically predominate extensible testing procedures for reliable supply chains.';
+    }
+    x-img {
+      --attr-source: './images/exept-decor.jpg';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+    > picture {
+      padding-inline: 40px @426 10px;
+
+      img {
+        margin: auto;
+        width: 100%;
+      }
+    }
+    h3 {
+      --text: 'Project result';
+    }
+    p {
+      --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.';
+    }
+  }
+}
+section#subscribe {
+  header-section {
+    h2 {
+      --text: 'Subscribe Our Newsletter';
+    }
+    p {
+      --text: 'Build stronger Customer Relationships with Consultalk';
+    }
+  }
+  form[action='#'] {
+    input {
+      --attr-type: 'email';
+      --attr-placeholder: 'Your E-Mail';
+      --attrs: "required name='user-email'";
+    }
+    button.yellow.big {
+      --attr-type: 'submit';
+      --text: 'Submit';
+    }
+  }
+}
+section#more {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 30px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  h2 {
+    --text: 'More case studies';
+  }
+
+  section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    background: var(--gray-black);
+    padding: 40px 25px;
+
+    > * {
+      flex: 0 1 300px;
+    }
+
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+  }
+
+  a.likeButton.big {
+    --attr-href: './caseStudy.html';
+    --attrs: "target='_blank' rel='noopener noreferrer'";
+    --text: 'Browse all case studies';
+    margin-top: 15px;
+  }
+}

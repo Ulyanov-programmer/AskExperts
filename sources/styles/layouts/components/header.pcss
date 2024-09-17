@@ -1,0 +1,387 @@
+header#header {
+  color: var(--white);
+
+  header-top {
+    font-size: rem(14px);
+    background: var(--black);
+    display: flex;
+    justify-content: space-between @769 center;
+    align-items: center;
+    padding-inline: var(--content-inline-padding);
+    padding-block: 20px @426 10px;
+
+    address {
+      --text: 'Monday - Friday 8AM - 9PM';
+
+      display: flex @769 none;
+      align-items: center;
+      gap: 10px;
+      line-height: 0.1;
+
+      &:nth-child(1) {
+        &:before {
+          content: url('../../../images/icons/clocks.svg');
+        }
+      }
+      &:nth-child(2) {
+        &:before {
+          content: url('../../../images/icons/location.svg');
+        }
+      }
+    }
+    address {
+      --text: '725 Park Ave, New York';
+    }
+
+    socials-block {
+      a {
+        --attrs: 'href="#" target="_self" rel="noreferrer" title="Instagram"';
+        img {
+          --attrs: 'src="images/icons/Instagram.svg" alt=""';
+        }
+      }
+      a {
+        --attrs: 'href="#" target="_self" rel="noreferrer" title="Facebook"';
+        img {
+          --attrs: 'src="images/icons/Facebook.svg" alt=""';
+        }
+      }
+      a {
+        --attrs: 'href="#" target="_self" rel="noreferrer" title="Twitter"';
+        img {
+          --attrs: 'src="images/icons/Twitter.svg" alt=""';
+        }
+      }
+      a {
+        --attrs: 'href="#" target="_self" rel="noreferrer" title="LinkedIn"';
+        img {
+          --attrs: 'src="images/icons/Linked-In.svg" alt=""';
+        }
+      }
+    }
+  }
+
+  header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--content-inline-padding);
+    padding-block: 40px @769 15px;
+    gap: 40px;
+    font-size: rem(18px);
+    background: #474747;
+
+    picture {
+      source {
+        --attrs: 'srcset="images/favicon.svg" media="(max-width: 1240px)"';
+      }
+      img {
+        --attrs: 'src="images/logo.svg" alt="logo"';
+      }
+    }
+
+    > nav {
+      display: @769 none;
+
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+
+        > li {
+          a {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            padding-inline: 15px;
+            transition: all 0.3s ease;
+
+            &.active {
+              color: var(--green);
+
+              &:before {
+                border-color: currentColor;
+                background: currentColor;
+              }
+            }
+            @media (hover: hover) {
+              &:hover {
+                color: var(--green);
+              }
+            }
+            &:before {
+              border-radius: 50%;
+              height: 0.5em;
+              width: 0.5em;
+              display: inline-block;
+              border: 1px solid #818181;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+    nav {
+      ul {
+        li {
+          a.active {
+            --text: 'Home';
+            --attrs: "target='_self' rel='noopener' href='./index.html'";
+          }
+        }
+        li {
+          a {
+            --text: 'About';
+            --attrs: "target='_self' rel='noopener' href='./about.html'";
+          }
+        }
+        li {
+          a {
+            --text: 'Services';
+            --attrs: 'target="_self" rel="noopener" href="./services.html"';
+          }
+        }
+        li {
+          a {
+            --text: 'Team';
+            --attrs: 'target="_self" rel="noopener" href="./Team.html"';
+          }
+        }
+        li {
+          a {
+            --text: 'Pages';
+            --attrs: 'target="_self" rel="noopener" href="./Pages.html"';
+          }
+        }
+        li {
+          a {
+            --text: 'Contact';
+            --attrs: 'target="_self" rel="noopener" href="./contact.html"';
+          }
+        }
+      }
+    }
+
+    > a[href^='tel'] {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white) @1240 none;
+      color: var(--black);
+      border-radius: 42px;
+      padding: 8px 30px @1240 0;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 0.1;
+      padding-left: 10px;
+
+      max-width: @(width > 1240px) fit-content;
+      flex: @(width > 1240px) 1 0 auto;
+
+      &:hover {
+        &:before {
+          animation: @(hover: hover) phone-call 500ms ease 1 forwards;
+        }
+      }
+
+      &:before {
+        content: url('../../../images/icons/yellow_tel.svg');
+
+        @keyframes phone-call {
+          25% {
+            rotate: 13deg;
+          }
+          50% {
+            scale: 1.2;
+          }
+          75% {
+            rotate: -13deg;
+          }
+        }
+      }
+
+      span {
+        display: @1240 none;
+      }
+    }
+
+    a {
+      --attr-href: 'tel:+8884521505';
+
+      span {
+        --text: '+ (888) 452 1505';
+      }
+    }
+
+    button#burgerButton[data-open-dialog-id='burger-menu'] {
+      --attr-type: 'button';
+      --attr-title: 'Open the burger menu';
+
+      display: @(width > 768px) none;
+
+      svg {
+        --attrs: 'width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"';
+
+        > * {
+          fill: var(--yellow);
+        }
+
+        rect.rectTop {
+          --attrs: 'width="40" height="3" x="0%" y="0%" fill="gray"';
+        }
+        rect.rectCenter {
+          --attrs: 'width="40" height="3" x="0%" y="45%" fill="gray"';
+        }
+        rect.rectBottom {
+          --attrs: 'width="40" height="3" x="0%" y="90%" fill="gray"';
+        }
+      }
+    }
+    dialog#burger-menu[data-modal-dialog] {
+      position: fixed;
+
+      display: grid @(width > 768px) none;
+      align-content: center;
+      justify-items: center;
+
+      width: max-content;
+      top: 0;
+      left: 50%;
+      translate: -50%;
+      height: 100vh;
+
+      transition: all 0.3s ease;
+
+      &::backdrop {
+        backdrop-filter: blur(5px);
+      }
+
+      &:not([open]) {
+        bottom: 50vh;
+      }
+
+      > &[open] {
+        bottom: 0;
+      }
+
+      nav {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        scroll-snap-type: y mandatory;
+        height: 80vh;
+        width: 90vw;
+        padding-block: 10vh;
+
+        /* For normal outline visibility */
+        padding: 1px;
+
+        button[data-close-dialog-id='burger-menu'] {
+          --attr-type: 'button';
+          --attr-title: 'Close the burger menu';
+
+          align-self: end;
+          margin-bottom: 30px;
+
+          svg {
+            --attrs: 'width="40" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"';
+
+            > * {
+              transform-origin: center;
+              transform-box: fill-box;
+              transition: all 0.3s ease;
+              fill: var(--yellow);
+            }
+
+            rect.rectTop {
+              --attrs: 'width="40" height="3" x="0%" y="0%" fill="gray"';
+
+              rotate: 45deg;
+
+              x: 0%;
+              y: 50%;
+            }
+            rect.rectCenter {
+              --attrs: 'width="40" height="3" x="0%" y="45%" fill="gray"';
+
+              pointer-events: none;
+              overflow: hidden;
+              opacity: 0;
+            }
+            rect.rectBottom {
+              --attrs: 'width="40" height="3" x="0%" y="90%" fill="gray"';
+
+              rotate: -45deg;
+
+              x: 0;
+              y: 50%;
+            }
+          }
+        }
+
+        ul {
+          display: grid;
+          gap: 30px;
+          justify-items: center;
+          font-size: 24px;
+          overflow: auto;
+
+          li {
+            scroll-snap-align: start;
+
+            * {
+              text-shadow: 0 0 10px black;
+            }
+
+            address {
+              --text: 'Monday - Friday 8AM - 9PM';
+
+              color: var(--yellow);
+            }
+          }
+          li {
+            address {
+              --text: '725 Park Ave, New York';
+            }
+          }
+          li {
+            a.active {
+              --text: 'Home';
+              --attrs: 'target="_self" rel="noopener" href="#"';
+            }
+          }
+          li {
+            a {
+              --text: 'About';
+              --attrs: 'target="_self" rel="noopener" href="./about.html"';
+            }
+          }
+          li {
+            a {
+              --text: 'Services';
+              --attrs: 'target="_self" rel="noopener" href="./services.html"';
+            }
+          }
+          li {
+            a {
+              --text: 'Team';
+              --attrs: 'target="_self" rel="noopener" href="./Team.html"';
+            }
+          }
+          li {
+            a {
+              --text: 'Pages';
+              --attrs: 'target="_self" rel="noopener" href="#"';
+            }
+          }
+          li {
+            a {
+              --text: 'Contact';
+              --attrs: 'target="_self" rel="noopener" href="./contact.html"';
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/changelog-hero-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Updates';
+    }
+    h2 {
+      --text: 'Changelog';
+    }
+  }
+}
+section#get-log {
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  .likeBlockquote.row {
+    h3 {
+      --text: 'Version 01';
+    }
+    a.likeButton.white.big {
+      --attr-href: '#';
+      --attrs: "target='_blank' rel='noopener noreferrer'";
+      --text: 'Initial Consultalk Webflow Template Release';
+    }
+  }
+}

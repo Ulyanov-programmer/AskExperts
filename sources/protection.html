@@ -1,0 +1,22 @@
+<x-layout page_title="Protection">
+  <push name="additional_code_in_head">
+    <link rel="stylesheet" href="./styles/layouts/components/header.css" />
+    <link rel="stylesheet" href="./styles/layouts/components/footer.css" />
+    <link rel="stylesheet" href="./styles/layouts/protection.css" />
+    <link rel="stylesheet" href="./scripts/dialogs/index.css" />
+    <script type="module" src="./scripts/dialogs/index.js"></script>
+  </push>
+  <section id="hero">
+    <div>
+      <highlighted-text class="yellow"> Protection </highlighted-text>
+      <h2> Password Protection </h2>
+    </div>
+  </section>
+  <section id="password">
+    <form class="likeBlockquote">
+      <h2> Enter Password </h2>
+      <input type='password' placeholder='Enter Your Password' required name='password' />
+      <button class="big yellow" type='submit'> Submit </button>
+    </form>
+  </section>
+</x-layout>

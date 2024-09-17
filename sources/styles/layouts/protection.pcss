@@ -1,0 +1,31 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/protection-hero-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Protection';
+    }
+    h2 {
+      --text: 'Password Protection';
+    }
+  }
+}
+section#password {
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  form.likeBlockquote {
+    h2 {
+      --text: 'Enter Password';
+    }
+    input {
+      --attr-type: 'password';
+      --attr-placeholder: 'Enter Your Password';
+      --attrs: "required name='password'";
+    }
+    button.big.yellow {
+      --attr-type: 'submit';
+      --text: 'Submit';
+    }
+  }
+}

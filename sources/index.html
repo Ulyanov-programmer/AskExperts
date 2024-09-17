@@ -1,0 +1,542 @@
+<x-layout page_title="AskExperts">
+  <push name="additional_code_in_head">
+    <link rel="stylesheet" href="./styles/layouts/components/header.css" />
+    <link rel="stylesheet" href="./styles/layouts/components/footer.css" />
+    <link rel="stylesheet" href="./styles/layouts/index.css" />
+
+    <link rel="stylesheet" href="./scripts/dialogs/index.css" />
+    <script type="module" src="./scripts/dialogs/index.js"></script>
+
+    <script src="./scripts/infiniteScroll/index.js"></script>
+
+    <link rel="stylesheet" href="./assets/swiper/swiper-bundle.min.css" />
+    <script type="module">
+      import Swiper from './assets/swiper/swiper-bundle.min.mjs'
+      new Swiper(`#feedback-slider`, {
+        grabCursor: true,
+        loop: true,
+        spaceBetween: 15,
+        navigation: {
+          nextEl: `.feedback-next`,
+          prevEl: `.feedback-prev`,
+          disabledClass: 'inactive',
+        },
+        thumbs: {
+          swiper: new Swiper(`#feedback-text`, {}),
+          slideThumbActiveClass: 'active',
+        },
+      })
+    </script>
+
+    <script type="module" src="./scripts/validateContactForm.js"></script>
+  </push>
+  <section id="hero">
+    <div>
+      <h1>
+        Your small business <br />
+        growth advisors
+      </h1>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <footer>
+        <button type="button">Our Services</button>
+        <button class="white withIcon" type="button">
+          <img src="./images/notepad.svg" alt="" />Book a Meeting
+        </button>
+      </footer>
+    </div>
+  </section>
+  <infinite-scroll id="clients-line">
+    <img src="./images/clients/1.svg" alt="" />
+    <img src="./images/clients/2.svg" alt="" />
+    <img src="./images/clients/3.svg" alt="" />
+    <img src="./images/clients/4.svg" alt="" />
+    <img src="./images/clients/5.svg" alt="" />
+    <img src="./images/clients/6.svg" alt="" />
+  </infinite-scroll>
+  <section id="about-us">
+    <text-block>
+      <highlighted-text class="yellow"> About us </highlighted-text>
+      <h2>About our Consulting Agency Team</h2>
+      <strong>
+        We create experiences and build products that make business grow
+      </strong>
+      <p>
+        Get help from Alex Moore, a professional business coach with advanced
+        experience on growth and business scaling.
+      </p>
+      <footer>
+        <advantage-block>
+          <span> 400+ </span>
+          <strong> Business Services </strong>
+        </advantage-block>
+        <advantage-block>
+          <span> 100+ </span>
+          <strong> Happy Customers </strong>
+        </advantage-block>
+      </footer>
+    </text-block>
+    <images-block> </images-block>
+  </section>
+  <section id="services">
+    <header-section centered>
+      <highlighted-text class="green"> Services </highlighted-text>
+      <h2>Get Control Over Your Business I take your finance to next level</h2>
+    </header-section>
+    <services-container>
+      <service-block>
+        <img src="./images/icons/stat_circle.svg" alt="" />
+        <strong> Audit & Evaluation </strong>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+      </service-block>
+      <service-block>
+        <img src="./images/icons/stat_circle.svg" alt="" />
+        <strong> Audit & Evaluation </strong>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+      </service-block>
+      <service-block>
+        <img src="./images/icons/stat_circle.svg" alt="" />
+        <strong> Audit & Evaluation </strong>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+      </service-block>
+      <service-block>
+        <img src="./images/icons/stat_circle.svg" alt="" />
+        <strong> Audit & Evaluation </strong>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+      </service-block>
+      <service-block>
+        <img src="./images/icons/stat_circle.svg" alt="" />
+        <strong> Audit & Evaluation </strong>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+      </service-block>
+      <service-block>
+        <img src="./images/icons/stat_circle.svg" alt="" />
+        <strong> Audit & Evaluation </strong>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced
+          experience on growth and business scaling.
+        </p>
+      </service-block>
+    </services-container>
+  </section>
+  <section id="process">
+    <process-block>
+      <highlighted-text class="green"> Process </highlighted-text>
+      <h2>There have some easy steps to join with us!</h2>
+      <p>
+        Leverage agile frameworks to provide a robust synopsis for high level
+        overviews. Iterative approaches to corporate strategy foster
+        collaborative thinking to further the overall value proposition.
+      </p>
+      <ol>
+        <three-section-block role="listitem">
+          <strong> Setup Account </strong>
+          <p>
+            We understand the importance of approaching each work integrally.
+          </p>
+        </three-section-block>
+        <three-section-block role="listitem">
+          <strong> Consult with us </strong>
+          <p>
+            Increase social reach and productivity with our App Directory, a
+            collection.
+          </p>
+        </three-section-block>
+        <three-section-block role="listitem">
+          <strong> Payment & Boost </strong>
+          <p>
+            We encourage every team member to be a whole person. We have a
+            flexible.
+          </p>
+        </three-section-block>
+      </ol>
+    </process-block>
+    <about-block>
+      <highlighted-text class="yellow">
+        Growing with our clients
+      </highlighted-text>
+      <h2>30 Years of Experience</h2>
+      <p>
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity beta test. Override the digital divide with additional from
+        DevOps.<br />
+        <br />Leverage agile frameworks to provide a robust synopsis for high
+        level overviews. Iterative approaches to corporate strategy foster
+        collaborative thinking to further the overall value proposition.
+      </p>
+      <advantages-blocks>
+        <small-advantages-block>
+          <img src="./images/icons/time.svg" loading="lazy" alt="" />
+          <strong> Consistency </strong>
+          <p>Podcasting operational change management workflow.</p>
+        </small-advantages-block>
+        <small-advantages-block>
+          <img src="./images/icons/time.svg" loading="lazy" alt="" />
+          <strong> Consistency </strong>
+          <p>Podcasting operational change management workflow.</p>
+        </small-advantages-block>
+        <small-advantages-block>
+          <img src="./images/icons/time.svg" loading="lazy" alt="" />
+          <strong> Consistency </strong>
+          <p>Podcasting operational change management workflow.</p>
+        </small-advantages-block>
+        <small-advantages-block>
+          <img src="./images/icons/time.svg" loading="lazy" alt="" />
+          <strong> Consistency </strong>
+          <p>Podcasting operational change management workflow.</p>
+        </small-advantages-block>
+      </advantages-blocks>
+    </about-block>
+  </section>
+  <section id="gallery">
+    <header-section three-sections>
+      <highlighted-text class="green"> Proccess </highlighted-text>
+      <h2>
+        Our client, global analytical techno company, wanted to build market.
+      </h2>
+      <button class="yellow" type="button">More Gallery</button>
+    </header-section>
+    <gallery-block>
+      <gallery-item>
+        <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+          <overlay-content>
+            <strong> Taxes & Efficiency </strong>
+            <small> Business </small>
+          </overlay-content>
+        </a>
+      </gallery-item>
+      <gallery-item>
+        <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+          <overlay-content>
+            <strong> Taxes & Efficiency </strong>
+            <small> Business </small>
+          </overlay-content>
+        </a>
+      </gallery-item>
+      <gallery-item>
+        <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+          <overlay-content>
+            <strong> Taxes & Efficiency </strong>
+            <small> Business </small>
+          </overlay-content>
+        </a>
+      </gallery-item>
+      <gallery-item>
+        <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+          <overlay-content>
+            <strong> Taxes & Efficiency </strong>
+            <small> Business </small>
+          </overlay-content>
+        </a>
+      </gallery-item>
+      <gallery-item>
+        <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+          <overlay-content>
+            <strong> Taxes & Efficiency </strong>
+            <small> Business </small>
+          </overlay-content>
+        </a>
+      </gallery-item>
+      <gallery-item>
+        <a href="./caseStudy.html" target="_blank" rel="noopener noreferrer">
+          <overlay-content>
+            <strong> Taxes & Efficiency </strong>
+            <small> Business </small>
+          </overlay-content>
+        </a>
+      </gallery-item>
+    </gallery-block>
+    <advantages-row>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+      <div>
+        <strong> 1128+ </strong>
+        <small> Successful Work </small>
+      </div>
+    </advantages-row>
+  </section>
+  <section id="feedback">
+    <highlighted-text class="green"> Client Feedback </highlighted-text>
+    <div id="feedback-text" class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h3>
+            <muted-text> Lorem ipsum dolor sit amet, consectetur </muted-text>
+            <span> adipiscing elit, sed do eiusmod </span>
+            <muted-text> tempor incididunt ut labore et dolore </muted-text>
+          </h3>
+        </div>
+        <div class="swiper-slide">
+          <h3>
+            <muted-text> Lorem ipsum </muted-text>
+            <span> elit, sed do eiusmod </span>
+            <muted-text> tempor incididunt </muted-text>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <main-slider>
+      <button class="gray withIcon feedback-prev" type="button">
+        <img src="./images/icons/toLeft.svg" loading="lazy" alt="" />Prev
+      </button>
+      <div id="feedback-slider" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <picture>
+                <img src="./images/client.png" loading="lazy" alt="" />
+              </picture>
+              <small> Web Designer </small>
+              <strong> Kathleen Smith </strong>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <picture>
+                <img src="./images/client.png" loading="lazy" alt="" />
+              </picture>
+              <small> Web Designer </small>
+              <strong> Kathleen Smith </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="gray withIcon feedback-next" type="button">
+        Next
+        <img src="./images/icons/yellowToRight.svg" loading="lazy" alt="" />
+      </button>
+    </main-slider>
+  </section>
+  <section id="read">
+    <content-block>
+      <highlighted-text class="green"> Book Now </highlighted-text>
+      <h2>Better Consult, Better Results</h2>
+      <p>
+        Our software development agency has a growth up to 30% per each year. If
+        you are result-oriented, not afraid to take initiative – drop us a note
+        and join our team!
+      </p>
+      <a class="likeButton yellow" href="tel:+88005553535">
+        <img src="./images/icons/yellow_tel.svg" loading="lazy" alt="" />+800
+        1234 654
+      </a>
+    </content-block>
+    <images-block>
+      <x-img
+        source="./images/read-section-bottom-img.png"
+        loading="lazy"
+        alt=""
+        webp
+        avif
+      >
+      </x-img>
+      <x-img
+        source="./images/read-section-top-img.png"
+        loading="lazy"
+        alt=""
+        webp
+        avif
+      >
+      </x-img>
+    </images-block>
+  </section>
+  <section id="news">
+    <header-section three-sections>
+      <highlighted-text class="green"> Blog </highlighted-text>
+      <h2>Take a look at our latest articles & resources</h2>
+      <a
+        class="likeButton yellow"
+        href="./blog.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        More News
+      </a>
+    </header-section>
+    <section>
+      <news-item>
+        <a href="./blog-single.html" target="_blank" rel="noopener noreferrer">
+          <x-img
+            source="./images/news-image.jpg"
+            loading="lazy"
+            alt=""
+            webp
+            avif
+          >
+          </x-img>
+        </a>
+        <h5>Consulting Fees Study 2019 (And How To Raise Your Rates)</h5>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. Iterative approaches to corporate strategy foster
+          collaborative thinking to further the overall value proposition.
+        </p>
+        <footer>
+          <author-block>
+            <x-img
+              source="./images/news-author.jpg"
+              loading="lazy"
+              alt=""
+              webp
+              avif
+            >
+            </x-img>
+            <span> John Carter </span>
+            <span> September 1, 2022 </span>
+          </author-block>
+          <a
+            class="likeButton"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read More
+          </a>
+        </footer>
+      </news-item>
+      <news-item>
+        <a href="./blog-single.html" target="_blank" rel="noopener noreferrer">
+          <x-img
+            source="./images/news-image.jpg"
+            loading="lazy"
+            alt=""
+            webp
+            avif
+          >
+          </x-img>
+        </a>
+        <h5>Consulting Fees Study 2019 (And How To Raise Your Rates)</h5>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. Iterative approaches to corporate strategy foster
+          collaborative thinking to further the overall value proposition.
+        </p>
+        <footer>
+          <author-block>
+            <x-img
+              source="./images/news-author.jpg"
+              loading="lazy"
+              alt=""
+              webp
+              avif
+            >
+            </x-img>
+            <span> John Carter </span>
+            <span> September 1, 2022 </span>
+          </author-block>
+          <a
+            class="likeButton"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read More
+          </a>
+        </footer>
+      </news-item>
+    </section>
+  </section>
+  <section id="contact">
+    <text-block>
+      <header-section>
+        <highlighted-text class="yellow"> Proccess </highlighted-text>
+        <h2>Contact Us. It’s Easy.</h2>
+        <p>
+          Leverage agile frameworks to provide a robust synopsis for high level
+          overviews. Iterative approaches to corporate strategy foster
+          collaborative.
+        </p>
+      </header-section>
+      <aside>
+        <ul>
+          <three-section-block role="listitem" revert>
+            <img
+              src="./images/icons/yellow_yellow-bg_tel.svg"
+              loading="lazy"
+              alt=""
+            />
+            <strong>
+              <a href="tel:+88005553535"> +1 800 100 900 </a>
+            </strong>
+            <p>Call Today</p>
+          </three-section-block>
+          <three-section-block role="listitem" revert>
+            <img src="./images/icons/greenClocks.svg" loading="lazy" alt="" />
+            <strong> 9AM - 5PM </strong>
+            <p>Monday To Friday</p>
+          </three-section-block>
+          <three-section-block role="listitem" revert>
+            <img src="./images/icons/grayLocation.svg" loading="lazy" alt="" />
+            <strong>
+              <address>195 Devonshire St Boston, MA 02110</address>
+            </strong>
+            <p>USA Office</p>
+          </three-section-block>
+        </ul>
+      </aside>
+    </text-block>
+    <form class="two-columns" action="#" id="contact">
+      <label>
+        Full Name
+        <input type="text" placeholder="John David" name="contact-name" />
+      </label>
+      <label>
+        Email
+        <input
+          type="email"
+          placeholder="consult@mail.com"
+          required
+          name="contact-mail"
+        />
+      </label>
+      <label>
+        Phone
+        <input type="tel" placeholder="+008 654 231" name="contact-phone" />
+      </label>
+      <label>
+        Company(optional)
+        <input
+          type="text"
+          placeholder="yourcompany.com"
+          name="contact-company-site"
+        />
+      </label>
+      <label>
+        Message
+        <textarea
+          id="contact-text"
+          name="contact-text"
+          placeholder="Briefly tell us about your project and your current goals. How can we help you?"
+        ></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</x-layout>

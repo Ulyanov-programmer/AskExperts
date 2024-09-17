@@ -1,0 +1,105 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/licenses-hero-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Licenses';
+    }
+    h2 {
+      --text: "All asset's Licenses";
+    }
+  }
+}
+section#licenses {
+  display: grid;
+  gap: clamp(40px, pxToVw(80), 80px);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  padding-bottom: 0;
+
+  article {
+    display: grid;
+    grid-template: auto / 300px 1fr @1440 auto / auto;
+    gap: 100px @1440 20px;
+    text-align: @1440 center;
+
+    h3 {
+      --text: 'Icon & Graphics';
+    }
+    section {
+      display: grid;
+      gap: 20px;
+
+      p {
+        --text: "All graphical assets in this template are licensed for personal and commercial use. If you'd like to use a specific asset, please check the license below. <br> <br> The iconography used in this Template are licensed for free personal and commercial use. If you'd like to use any specific Icon, you can check the licenses and download the images for free on phosphoricons.";
+      }
+      hgroup {
+        h4 {
+          --text: 'Phosphor Icon';
+
+          small {
+            --text: 'Licenses';
+            font-weight: 400;
+            font-size: clamp(16px, pxToVw(30px), 30px);
+
+            &:before {
+              content: ': ';
+            }
+          }
+        }
+      }
+    }
+  }
+  article {
+    h3 {
+      --text: 'Photography';
+    }
+    section {
+      hgroup {
+        h4 {
+          --text: 'Pexels';
+
+          small {
+            --text: 'Licenses';
+          }
+        }
+      }
+      p {
+        --text: 'Image 1, Image 2, Image 3, Image 4, Image 5, Image 6, Image 7, Image 8, Image 9, Image 10';
+      }
+      hgroup {
+        h4 {
+          --text: 'Unsplash';
+
+          small {
+            --text: 'Licenses';
+          }
+        }
+      }
+      p {
+        --text: 'Image 1, Image 2, Image 3, Image 4, Image 5, Image 6, Image 7, Image 8, Image 9, Image 10';
+      }
+    }
+  }
+}
+section#subscribe {
+  header-section {
+    h2 {
+      --text: 'Subscribe Our Newsletter';
+    }
+    p {
+      --text: 'Build stronger Customer Relationships with Consultalk';
+    }
+  }
+  form[action='#'] {
+    input {
+      --attr-type: 'email';
+      --attr-placeholder: 'Your E-Mail';
+      --attrs: "required name='user-email'";
+    }
+    button.yellow.big {
+      --attr-type: 'submit';
+      --text: 'Submit';
+    }
+  }
+}

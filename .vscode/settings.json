@@ -1,0 +1,8 @@
+{
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "liveServer.settings.port": 1234,
+  "liveServer.settings.root": "/dist/",
+}

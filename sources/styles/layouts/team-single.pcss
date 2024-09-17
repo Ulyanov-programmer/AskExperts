@@ -1,0 +1,140 @@
+h1.visuallyHidden {
+  --text: 'Teammate Name';
+}
+section#about-teammate {
+  display: grid(clamp(30px, pxToVw(90), 90px));
+  grid-template-columns: 0.8fr 1.2fr;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  padding-top: calc(var(--content-block-padding) * 2);
+
+  @media (width <= 768px) {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+
+    image-block {
+      max-height: 400px;
+    }
+  }
+
+  image-block.decorated-image {
+    min-height: @(width >= 1440px) 500px;
+
+    x-img {
+      --attr-source: './images/teammate.jpg';
+      --attrs: "alt='' webp avif";
+    }
+    > picture img {
+      size: 100%;
+      object-fit: contain;
+      object-position: top left @768 center;
+      border-radius: 25px;
+    }
+  }
+  text-block {
+    --gap: 25px;
+
+    display: grid(var(--gap));
+    justify-items: start;
+
+    header {
+      --hor-gap: 30px;
+
+      display: inline-grid;
+      gap: 10px var(--hor-gap);
+      grid-template:
+        'name socials' auto
+        'post post' auto
+        / 1fr 1fr;
+      align-items: center;
+      justify-items: start @769 center;
+      margin: @769 auto;
+
+      @media (width <= 1240px) {
+        grid-template:
+          'name' auto
+          'post' auto
+          'socials' auto
+          / 1fr;
+      }
+
+      h2 {
+        --text: 'Sarah Jasmine';
+        line-height: 1;
+        grid-area: name;
+      }
+      small {
+        --text: 'CEO at Company';
+
+        grid-area: post;
+        font-family: Cabin;
+        font-size: 20px;
+      }
+      socials-block[white-bg] {
+        grid-area: socials;
+        flex-flow: row nowrap;
+
+        @media (width >= 1240px) {
+          padding-left: var(--hor-gap);
+          border-left: 1px solid #c1c1c1;
+        }
+
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer' title='instagram'";
+
+          img {
+            --attr-src: './images/icons/Instagram.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer' title='instagram'";
+
+          img {
+            --attr-src: './images/icons/Instagram.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+      }
+    }
+    p {
+      --text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui. Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.';
+    }
+    section {
+      display: grid(15px);
+      border-top: 1px solid #c1c1c1;
+      padding-top: var(--gap);
+
+      h3 {
+        --text: 'Past experience';
+      }
+      p {
+        --text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui. Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do. <br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+      }
+    }
+  }
+}
+section#subscribe {
+  header-section {
+    h2 {
+      --text: 'Subscribe Our Newsletter';
+    }
+    p {
+      --text: 'Build stronger Customer Relationships with Consultalk';
+    }
+  }
+  form[action='#'] {
+    input {
+      --attr-type: 'email';
+      --attr-placeholder: 'Your E-Mail';
+      --attrs: "required name='user-email'";
+    }
+    button.yellow.big {
+      --attr-type: 'submit';
+      --text: 'Submit';
+    }
+  }
+}

@@ -1,0 +1,439 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/about-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Services';
+    }
+    h1 {
+      --text: 'Creative Services For Boost Your Business Growth';
+    }
+  }
+}
+section#vision {
+  text-block {
+    header-section {
+      highlighted-text.green {
+        --text: 'OUR VISION';
+      }
+      h2 {
+        --text: 'Turn your ideas into reality.';
+      }
+      p {
+        --text: 'Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.';
+      }
+    }
+
+    ul {
+      li {
+        p {
+          --text: 'Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day.';
+        }
+      }
+      li {
+        p {
+          --text: 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.';
+        }
+      }
+    }
+  }
+  images-block.decorated-image-small-right {
+    x-img {
+      --attr-source: './images/vision.png';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+  }
+  advantages-row {
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+    div {
+      strong {
+        --text: '1128+';
+      }
+      small {
+        --text: 'Successful Work';
+      }
+    }
+  }
+}
+section#principles {
+  display: grid(25px);
+  background: var(--gray);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  three-section-block {
+    header-section {
+      highlighted-text.yellow {
+        --text: 'Growing with our Clients';
+      }
+      h2 {
+        --text: 'Our core values & principles';
+      }
+      p {
+        --text: 'Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.';
+      }
+    }
+    button {
+      --attr-type: 'button';
+      --text: 'Get in touch';
+    }
+  }
+
+  advantages-blocks {
+    display: flex(25px, row wrap);
+    justify-content: center;
+    align-items: start;
+
+    > * {
+      @media (width > 500px) {
+        flex: 1 1 200px;
+        max-width: 350px;
+      }
+    }
+
+    @media (width <= 500px) {
+      display: grid;
+      gap: 10px;
+      justify-content: initial;
+      grid-auto-flow: column;
+      /* size of the first block in this container */
+      grid-template-columns: 70%;
+      /* size of a block in this container */
+      grid-auto-columns: 70%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      > * {
+        scroll-snap-align: center;
+      }
+    }
+
+    small-advantages-block[white] {
+      img {
+        --attr-src: './images/icons/time.svg';
+        --attrs: "loading='lazy' alt=''";
+      }
+
+      strong {
+        --text: 'Creative Ideas';
+      }
+      p {
+        --text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.';
+      }
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Read More';
+      }
+    }
+    small-advantages-block[white] {
+      img {
+        --attr-src: './images/icons/time.svg';
+        --attrs: "loading='lazy' alt=''";
+      }
+
+      strong {
+        --text: 'Creative Ideas';
+      }
+      p {
+        --text: 'Lorem ipsum dolor ';
+      }
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Read More';
+      }
+    }
+    small-advantages-block[white] {
+      img {
+        --attr-src: './images/icons/time.svg';
+        --attrs: "loading='lazy' alt=''";
+      }
+
+      strong {
+        --text: 'Creative Ideas';
+      }
+      p {
+        --text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.';
+      }
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Read More';
+      }
+    }
+    small-advantages-block[white] {
+      img {
+        --attr-src: './images/icons/time.svg';
+        --attrs: "loading='lazy' alt=''";
+      }
+
+      strong {
+        --text: 'Creative Ideas';
+      }
+      p {
+        --text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.';
+      }
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Read More';
+      }
+    }
+  }
+}
+section#video-block {
+  header-section[centered] {
+    highlighted-text.green {
+      --text: 'Our History';
+    }
+    h2 {
+      --text: 'Better Website Means A User Experience';
+    }
+    p {
+      --text: 'Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.';
+    }
+  }
+
+  play-area {
+    button {
+      --attr-type: 'button';
+      --attr-title: 'Play the video';
+      --attr-data-open-dialog-id: 'history-video';
+
+      svg {
+        --attrs: 'width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg"';
+
+        circle {
+          --attrs: 'cx="54.5" cy="54.5" r="54.5" fill="white" fill-opacity="0.08"';
+        }
+        circle {
+          --attrs: 'cx="54.5" cy="54.5" r="54.35" stroke="white" stroke-opacity="0.42" stroke-width="0.3"';
+        }
+        circle {
+          --attrs: 'cx="54.5" cy="54.5" r="43.35" fill="white" fill-opacity="0.17" stroke="#D0D0D0" stroke-width="0.3"';
+        }
+        circle.main-circle {
+          --attrs: 'cx="54.5" cy="54.5" r="33.5" fill="white"';
+        }
+        path {
+          --attrs: 'd="M51.0194 62.7189L59.6309 55.4472C59.7696 55.33 59.881 55.1846 59.9574 55.021C60.0337 54.8574 60.0732 54.6795 60.0732 54.4994C60.0732 54.3193 60.0337 54.1414 59.9574 53.9778C59.881 53.8142 59.7696 53.6688 59.6309 53.5516L51.0194 46.2799C50.1974 45.5859 48.9277 46.1613 48.9277 47.2278V61.7731C48.9277 62.8396 50.1974 63.4149 51.0194 62.7189Z" fill="#3B3A5D"';
+        }
+      }
+    }
+  }
+
+  dialog#history-video[data-modal-dialog] {
+    div {
+      span {
+        --text: 'Your video could be here';
+      }
+    }
+  }
+}
+section#team {
+  display: grid(20px);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+  background: var(--gray);
+
+  header-section {
+    margin-bottom: 15px;
+    width: @(width > 1024px) 60%;
+
+    highlighted-text.yellow {
+      --text: 'Our team';
+    }
+    h2 {
+      --text: 'We champion the bold to achieve the extraordinary';
+    }
+    p {
+      --text: 'Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team.';
+    }
+  }
+
+  team-section {
+    teammate-block {
+      a {
+        --attr-href: './team-single.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        photo-block {
+          x-img {
+            --attr-source: './images/teammate.jpg';
+            --attrs: "loading='lazy' alt='' webp avif";
+          }
+          strong {
+            --text: 'CEO at Company';
+          }
+        }
+      }
+      strong {
+        --text: 'Sarah Jasmine';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.';
+      }
+      socials-block[white-bg] {
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+
+          img {
+            --attr-src: './images/icons/Facebook.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+
+          img {
+            --attr-src: './images/icons/Instagram.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+      }
+    }
+    teammate-block {
+      a {
+        --attr-href: './team-single.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        photo-block {
+          x-img {
+            --attr-source: './images/teammate.jpg';
+            --attrs: "loading='lazy' alt='' webp avif";
+          }
+          strong {
+            --text: 'CEO at Company';
+          }
+        }
+      }
+      strong {
+        --text: 'Sarah Jasmine';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.';
+      }
+      socials-block[white-bg] {
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+
+          img {
+            --attr-src: './images/icons/Facebook.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+
+          img {
+            --attr-src: './images/icons/Instagram.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+      }
+    }
+    teammate-block {
+      a {
+        --attr-href: './team-single.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        photo-block {
+          x-img {
+            --attr-source: './images/teammate.jpg';
+            --attrs: "loading='lazy' alt='' webp avif";
+          }
+          strong {
+            --text: 'CEO at Company';
+          }
+        }
+      }
+      strong {
+        --text: 'Sarah Jasmine';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews.';
+      }
+      socials-block[white-bg] {
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+
+          img {
+            --attr-src: './images/icons/Facebook.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer'";
+
+          img {
+            --attr-src: './images/icons/Instagram.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+        }
+      }
+    }
+  }
+}
+section#read {
+  content-block {
+    highlighted-text.green {
+      --text: 'Book Now';
+    }
+    h2 {
+      --text: 'Better Consult, Better Results';
+    }
+
+    p {
+      --text: 'Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative – drop us a note and join our team!';
+    }
+
+    a.likeButton.yellow {
+      --attr-href: 'tel:+88005553535';
+
+      img {
+        --attr-src: './images/icons/yellow_tel.svg';
+        --attrs: "loading='lazy' alt=''";
+        --text-after: '+800 1234 654';
+      }
+    }
+  }
+
+  images-block {
+    x-img {
+      --attr-source: './images/read-section-bottom-img.png';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+    x-img {
+      --attr-source: './images/read-section-top-img.png';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+  }
+}

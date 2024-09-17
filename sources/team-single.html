@@ -1,0 +1,45 @@
+<x-layout page_title="Teammate-name">
+  <push name="additional_code_in_head">
+    <link rel="stylesheet" href="./styles/layouts/components/header.css" />
+    <link rel="stylesheet" href="./styles/layouts/components/footer.css" />
+    <link rel="stylesheet" href="./styles/layouts/team-single.css" />
+    <link rel="stylesheet" href="./scripts/dialogs/index.css" />
+    <script type="module" src="./scripts/dialogs/index.js"></script>
+  </push>
+  <h1 class="visuallyHidden"> Teammate Name </h1>
+  <section id="about-teammate">
+    <image-block class="decorated-image">
+      <x-img source='./images/teammate.jpg' alt='' webp avif>
+      </x-img>
+    </image-block>
+    <text-block>
+      <header>
+        <h2> Sarah Jasmine </h2>
+        <small> CEO at Company </small>
+        <socials-block white-bg>
+          <a href='#' target='_blank' rel='noopener noreferrer' title='instagram'>
+            <img src='./images/icons/Instagram.svg' loading='lazy' alt='' />
+          </a>
+          <a href='#' target='_blank' rel='noopener noreferrer' title='instagram'>
+            <img src='./images/icons/Instagram.svg' loading='lazy' alt='' />
+          </a>
+        </socials-block>
+      </header>
+      <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui. Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do. </p>
+      <section>
+        <h3> Past experience </h3>
+        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui. Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do. <br /> <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+      </section>
+    </text-block>
+  </section>
+  <section id="subscribe">
+    <header-section>
+      <h2> Subscribe Our Newsletter </h2>
+      <p> Build stronger Customer Relationships with Consultalk </p>
+    </header-section>
+    <form action="#">
+      <input type='email' placeholder='Your E-Mail' required name='user-email' />
+      <button class="yellow big" type='submit'> Submit </button>
+    </form>
+  </section>
+</x-layout>

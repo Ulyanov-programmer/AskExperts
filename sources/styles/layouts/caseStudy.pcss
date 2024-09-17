@@ -1,0 +1,282 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/caseStudy-hero-bg.jpg');
+
+  div {
+    h1 {
+      --text: 'Case Studies';
+    }
+  }
+}
+section#cases {
+  display: grid;
+  gap: 50px;
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  buttons-row {
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 30px;
+    padding: 30px 40px;
+    width: fit-content;
+    margin: auto;
+
+    > button {
+      padding: 5px 10px;
+      text-decoration: underline transparent;
+      text-underline-offset: 10px;
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--yellow);
+          background: none;
+          text-underline-offset: 7px;
+          text-decoration-color: var(--yellow);
+        }
+      }
+      &:focus {
+        color: var(--yellow);
+        background: none;
+        text-underline-offset: 7px;
+        text-decoration-color: var(--yellow);
+      }
+    }
+
+    button {
+      --attr-type: 'button';
+      --text: 'All';
+    }
+    button {
+      --attr-type: 'button';
+      --text: 'Taxes & Efficiency';
+    }
+    button {
+      --attr-type: 'button';
+      --text: 'Investment banking';
+    }
+    button {
+      --attr-type: 'button';
+      --text: 'Financial Plan';
+    }
+    button {
+      --attr-type: 'button';
+      --text: 'Audit & Evaluation';
+    }
+  }
+
+  gallery-block {
+    margin-inline: @769 calc(-1 * var(--content-inline-padding));
+    border-radius: 20px;
+    background: var(--gray);
+
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+    gallery-item {
+      a {
+        --attr-href: './caseStudy.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+
+        overlay-content {
+          strong {
+            --text: 'Taxes & Efficiency';
+          }
+          small {
+            --text: 'Business';
+          }
+        }
+      }
+    }
+  }
+}
+section#contact {
+  text-block {
+    header-section {
+      highlighted-text.yellow {
+        --text: 'Proccess';
+      }
+      h2 {
+        --text: 'Contact Us. It’s Easy.';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.';
+      }
+    }
+
+    aside {
+      ul {
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/yellow_yellow-bg_tel.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            a {
+              --attr-href: 'tel:+88005553535';
+              --text: '+1 800 100 900';
+            }
+          }
+          p {
+            --text: 'Call Today';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/greenClocks.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            --text: '9AM - 5PM';
+          }
+          p {
+            --text: 'Monday To Friday';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/grayLocation.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            address {
+              --text: '195 Devonshire St Boston, MA 02110';
+            }
+          }
+          p {
+            --text: 'USA Office';
+          }
+        }
+      }
+    }
+  }
+
+  form[action='#'].two-columns {
+    label {
+      --text: 'Full Name';
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'John David';
+        --attrs: "required name='contact-name'";
+      }
+    }
+    label {
+      --text: 'Email';
+
+      input {
+        --attr-type: 'email';
+        --attr-placeholder: 'consult@mail.com';
+        --attrs: "required name='contact-mail'";
+      }
+    }
+    label {
+      --text: 'Phone';
+
+      input {
+        --attr-type: 'tel';
+        --attr-placeholder: '+008 654 231';
+        --attrs: "required name='contact-phone'";
+      }
+    }
+    label {
+      --text: 'Company(optional)';
+
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'yourcompany.com';
+        --attrs: "name='contact-company-site'";
+      }
+    }
+    label {
+      --text: 'Message';
+
+      textarea#contact-text {
+        --attr-name: 'contact-text';
+        --attr-placeholder: 'Briefly tell us about your project and your current goals. How can we help you?';
+        resize: none;
+      }
+    }
+
+    button {
+      --attr-type: 'submit';
+      --text: 'Send Message';
+    }
+  }
+}

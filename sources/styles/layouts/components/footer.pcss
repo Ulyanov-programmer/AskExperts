@@ -1,0 +1,252 @@
+footer#footer {
+  background: no-repeat center / cover
+    bgImageMultiType('../../../images/footer_bg.jpg');
+  padding-top: clamp(60px, pxToVw(120), 120px);
+  color: var(--white);
+
+  footer-top[role='navigation'] {
+    display: flex(35px clamp(30px, pxToVw(100), 150px), row wrap);
+    margin-inline: var(--content-inline-padding);
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid var(--gray);
+
+    > :first-child {
+      border-right: @(width > 500px) 1px solid var(--gray);
+      padding-right: @(width > 500px) clamp(30px, pxToVw(100), 150px);
+    }
+
+    > nav-block {
+      display: flex(15px, column nowrap);
+      align-items: start;
+      flex: 1 1 130px;
+
+      strong {
+        font-family: Cabin;
+        font-weight: 600;
+        font-size: 20px;
+
+        &:after {
+          display: block;
+          margin-top: 15px;
+          background: var(--yellow);
+          border-radius: 20px;
+          size: 2em 3px;
+          content: '';
+        }
+      }
+      ul {
+        display: grid(10px);
+
+        li {
+          display: flex;
+          align-items: center;
+
+          &:before {
+            display: inline-block;
+            border-radius: 50%;
+            background: currentColor;
+            size: 0.4em;
+            margin: 5px;
+            content: '';
+          }
+
+          a {
+            padding: 5px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              padding-left: @(hover: hover) 8px;
+              color: @(hover: hover) var(--yellow);
+            }
+            &:focus {
+              padding-left: 8px;
+              color: var(--yellow);
+            }
+          }
+        }
+      }
+    }
+
+    nav-block {
+      picture {
+        source {
+          --attrs: "srcset='images/favicon.svg' media='(max-width: 1240px)'";
+        }
+        img {
+          --attr-src: 'images/logo.svg';
+          --attrs: "loading='lazy' alt='logo'";
+        }
+      }
+      socials-block.grid {
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer' title='Instagram'";
+          img {
+            --attrs: "src='images/icons/Instagram.svg' alt=''";
+          }
+        }
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer' title='Facebook'";
+          img {
+            --attrs: "src='images/icons/Facebook.svg' alt=''";
+          }
+        }
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer' title='Twitter'";
+          img {
+            --attrs: "src='images/icons/Twitter.svg' alt=''";
+          }
+        }
+        a {
+          --attr-href: '#';
+          --attrs: "target='_blank' rel='noopener noreferrer' title='LinkedIn'";
+          img {
+            --attrs: "src='images/icons/Linked-In.svg' alt=''";
+          }
+        }
+      }
+    }
+    nav-block {
+      strong {
+        --text: 'Product';
+      }
+      ul {
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Service';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'FAQ';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Single Service';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Get Quote';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Prices';
+          }
+        }
+      }
+    }
+    nav-block {
+      strong {
+        --text: 'Company';
+      }
+      ul {
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'About';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'News';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Contacts';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Testimonials';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Our team';
+          }
+        }
+        li {
+          a {
+            --attr-href: '#';
+            --text: 'Our approach';
+          }
+        }
+      }
+    }
+    nav-block {
+      strong {
+        --text: 'Address';
+      }
+      address {
+        --text: '1700 W Blancke St, kiyev port south USA, America';
+      }
+      button.white {
+        --attr-type: 'button';
+        --text: 'Book an Appoinment';
+      }
+    }
+  }
+  footer-bottom {
+    display: flex(15px 0, row wrap);
+    justify-content: center;
+    padding: 20px var(--content-inline-padding);
+
+    small {
+      --text: '©2022 Consultalk. All rights reserved';
+
+      font-size: rem(16px);
+
+      > a {
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: @(hover: hover) var(--yellow);
+        }
+        &:focus {
+          color: var(--yellow);
+        }
+      }
+
+      &:not(:last-child) {
+        &:after {
+          margin: 7px;
+          content: '|';
+
+          @media (width <= 426px) {
+            content: '';
+          }
+        }
+      }
+    }
+    small {
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Terms of Service';
+      }
+    }
+    small {
+      a {
+        --attr-href: '#';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Privacy Policy';
+      }
+    }
+  }
+}

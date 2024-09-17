@@ -1,0 +1,59 @@
+section#error {
+  padding: calc(var(--content-block-padding) * 1.5)
+    var(--content-inline-padding);
+  background: var(--gray);
+
+  div {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+
+    &:before {
+      display: @768 none;
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      content: url('../../images/bgPattern.svg');
+    }
+    &:after {
+      display: @768 none;
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      content: url('../../images/icons/green-square.svg');
+    }
+
+    content-block {
+      isolation: isolate;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 30px;
+      backdrop-filter: blur(11px);
+      padding: 60px 80px @500 20px 40px;
+
+      strong {
+        --text: '404';
+        font-weight: 700;
+        font-family: 'Cabin';
+        font-size: 120px @500 60px;
+        color: var(--black);
+      }
+      h2 {
+        --text: 'Page Not Found';
+      }
+      p {
+        --text: "This Page Doesn't or was removed! We suggest you back to home";
+      }
+      a.likeButton.yellow.big {
+        --attr-href: './index.html';
+        --attrs: "target='_blank' rel='noopener noreferrer'";
+        --text: 'Back to home';
+        margin-top: 25px;
+      }
+    }
+  }
+}

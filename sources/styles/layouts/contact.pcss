@@ -1,0 +1,239 @@
+section#hero {
+  background: no-repeat center / cover
+    bgImageMultiType('../../images/contact-hero-bg.jpg');
+
+  div {
+    highlighted-text.yellow {
+      --text: 'Contactus';
+    }
+    h1 {
+      --text: 'Feel Free To Reach Us';
+    }
+  }
+}
+section#talk {
+  display: grid;
+  grid-template: auto / 1fr 1fr @768 auto / auto;
+  gap: 30px clamp(30px, pxToVw(80), 80px);
+  padding: var(--content-block-padding) var(--content-inline-padding);
+
+  images-block.decorated-image {
+    x-img {
+      --attr-source: './images/talk-decor.jpg';
+      --attrs: "loading='lazy' alt='' webp avif";
+    }
+    > picture img {
+      position: relative;
+      border-radius: 30px;
+      object-fit: cover;
+      object-position: center;
+
+      max-height: @768 300px;
+    }
+  }
+  content-block {
+    display: grid;
+    gap: 35px;
+    padding: 70px 0 @768 0;
+    margin: @768 auto;
+    max-width: @768 400px;
+    header-section {
+      highlighted-text.green {
+        --text: 'Let’s talk';
+      }
+      h2 {
+        --text: 'Get In Touch With Us';
+      }
+      p {
+        --text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.';
+      }
+    }
+    aside {
+      display: grid;
+      gap: 15px;
+
+      three-section-block[revert] {
+        img {
+          --attr-src: './images/icons/black_bg_tel.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+        p {
+          --text: 'Have Any Question?';
+        }
+        strong {
+          --text: 'Free';
+          a {
+            --attr-href: 'tel:+01238543987';
+            --text: '+01 238 543 987';
+          }
+        }
+      }
+      three-section-block[revert] {
+        img {
+          --attr-src: './images/icons/black_bg_tel.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+        p {
+          --text: 'Write Email';
+        }
+        strong {
+          a {
+            --attr-href: 'mailto:Info@consultalk.com';
+            --text: 'Info@consultalk.com';
+          }
+        }
+      }
+      three-section-block[revert] {
+        img {
+          --attr-src: './images/icons/black_bg_tel.svg';
+          --attrs: "loading='lazy' alt=''";
+        }
+        p {
+          --text: 'Visit Anytime';
+        }
+        strong {
+          address {
+            --text: 'King Street, Prior Lake, New York.';
+          }
+        }
+      }
+    }
+  }
+}
+section#subscribe {
+  header-section {
+    h2 {
+      --text: 'Subscribe Our Newsletter';
+    }
+    p {
+      --text: 'Build stronger Customer Relationships with Consultalk';
+    }
+  }
+  form[action='#'] {
+    input {
+      --attr-type: 'email';
+      --attr-placeholder: 'Your E-Mail';
+      --attrs: "required name='user-email'";
+    }
+    button.yellow.big {
+      --attr-type: 'submit';
+      --text: 'Submit';
+    }
+  }
+}
+section#contact {
+  text-block {
+    header-section {
+      highlighted-text.yellow {
+        --text: 'Proccess';
+      }
+      h2 {
+        --text: 'Contact Us. It’s Easy.';
+      }
+      p {
+        --text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.';
+      }
+    }
+
+    aside {
+      ul {
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/yellow_yellow-bg_tel.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            a {
+              --attr-href: 'tel:+88005553535';
+              --text: '+1 800 100 900';
+            }
+          }
+          p {
+            --text: 'Call Today';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/greenClocks.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            --text: '9AM - 5PM';
+          }
+          p {
+            --text: 'Monday To Friday';
+          }
+        }
+        three-section-block[role='listitem'][revert] {
+          img {
+            --attr-src: './images/icons/grayLocation.svg';
+            --attrs: "loading='lazy' alt=''";
+          }
+
+          strong {
+            address {
+              --text: '195 Devonshire St Boston, MA 02110';
+            }
+          }
+          p {
+            --text: 'USA Office';
+          }
+        }
+      }
+    }
+  }
+
+  form[action='#'].two-columns {
+    label {
+      --text: 'Full Name';
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'John David';
+        --attrs: "required name='contact-name'";
+      }
+    }
+    label {
+      --text: 'Email';
+
+      input {
+        --attr-type: 'email';
+        --attr-placeholder: 'consult@mail.com';
+        --attrs: "required name='contact-mail'";
+      }
+    }
+    label {
+      --text: 'Phone';
+
+      input {
+        --attr-type: 'tel';
+        --attr-placeholder: '+008 654 231';
+        --attrs: "required name='contact-phone'";
+      }
+    }
+    label {
+      --text: 'Company(optional)';
+
+      input {
+        --attr-type: 'text';
+        --attr-placeholder: 'yourcompany.com';
+        --attrs: "name='contact-company-site'";
+      }
+    }
+    label {
+      --text: 'Message';
+
+      textarea#contact-text {
+        --attr-name: 'contact-text';
+        --attr-placeholder: 'Briefly tell us about your project and your current goals. How can we help you?';
+        resize: none;
+      }
+    }
+
+    button {
+      --attr-type: 'submit';
+      --text: 'Send Message';
+    }
+  }
+}

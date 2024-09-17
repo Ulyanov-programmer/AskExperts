@@ -1,0 +1,19 @@
+<x-layout page_title="404">
+  <push name="additional_code_in_head">
+    <link rel="stylesheet" href="./styles/layouts/components/header.css" />
+    <link rel="stylesheet" href="./styles/layouts/components/footer.css" />
+    <link rel="stylesheet" href="./styles/layouts/404.css" />
+    <link rel="stylesheet" href="./scripts/dialogs/index.css" />
+    <script type="module" src="./scripts/dialogs/index.js"></script>
+  </push>
+  <section id="error">
+    <div>
+      <content-block>
+        <strong> 404 </strong>
+        <h2> Page Not Found </h2>
+        <p> This Page Doesn't or was removed! We suggest you back to home </p>
+        <a class="likeButton yellow big" href='./index.html' target='_blank' rel='noopener noreferrer'> Back to home </a>
+      </content-block>
+    </div>
+  </section>
+</x-layout>
