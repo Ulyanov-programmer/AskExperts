@@ -113,7 +113,7 @@
     text-decoration: none;
   }
 
-  ol>li {
+  ol > li {
     list-style: decimal inside;
   }
 
@@ -141,13 +141,13 @@
     color: var(--black);
   }
 
-  h1>muted-text,
-  h2>muted-text,
-  h3>muted-text,
-  h4>muted-text,
-  h5>muted-text,
-  h6>muted-text,
-  caption>muted-text {
+  h1 > muted-text,
+  h2 > muted-text,
+  h3 > muted-text,
+  h4 > muted-text,
+  h5 > muted-text,
+  h6 > muted-text,
+  caption > muted-text {
     opacity: 0.6;
   }
 
@@ -266,7 +266,7 @@
       margin: auto
     }
 
-    form.two-columns>* {
+    form.two-columns > * {
       width: 65vw;
     }
 
@@ -346,9 +346,9 @@
     display: none;
   }
 
-  form input[type='radio']+label,
-  form input[type='checkbox']+label,
-  form input[type='file']+label {
+  form input[type='radio'] + label,
+  form input[type='checkbox'] + label,
+  form input[type='file'] + label {
     pointer-events: all
   }
 
@@ -440,8 +440,8 @@
     gap: 15px;
   }
 
-  blockquote> :is(h2, h3, p),
-  .likeBlockquote> :is(h2, h3, p) {
+  blockquote > :is(h2, h3, p),
+  .likeBlockquote > :is(h2, h3, p) {
     color: var(--white);
     text-shadow: 0 0 5px #000;
   }
@@ -632,26 +632,26 @@
     justify-content: space-between;
   }
 
-  socials-block>*:first-child {
+  socials-block > *:first-child {
     padding-left: 0;
   }
 
-  socials-block>*:last-child {
+  socials-block > *:last-child {
     padding-right: 0;
   }
 
-  socials-block>* {
+  socials-block > * {
     padding-inline: 10px;
     transition: all 0.3s ease;
   }
 
   @media (hover: hover) {
-    socials-block>*:hover {
+    socials-block > *:hover {
       scale: 1.1;
     }
   }
 
-  socials-block>*:focus {
+  socials-block > *:focus {
     scale: 1.1;
   }
 
@@ -662,7 +662,7 @@
     margin: -10px;
   }
 
-  socials-block.grid>* {
+  socials-block.grid > * {
     padding: 10px;
   }
 
@@ -814,13 +814,13 @@
     gap: 15px;
   }
 
-  news-item>a {
+  news-item > a {
     overflow: hidden;
     margin-bottom: 15px;
     border-radius: 20px;
   }
 
-  news-item>a picture img {
+  news-item > a picture img {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: bottom left;
@@ -832,7 +832,7 @@
   }
 
   @media (hover: hover) {
-    news-item>a picture img:hover {
+    news-item > a picture img:hover {
       scale: 1.1;
     }
   }
@@ -872,7 +872,7 @@
 
   news-item footer author-block span:not(:last-child):after {
     margin-left: 16px;
-    content: |;
+    content: '|';
   }
 
   @media (max-width: 600px) {
@@ -890,7 +890,7 @@
     counter-increment: process-steps;
   }
 
-  three-section-block>img {
+  three-section-block > img {
     grid-area: left;
   }
 
@@ -908,17 +908,17 @@
     font-size: 20px;
   }
 
-  three-section-block strong>a {
+  three-section-block strong > a {
     transition: all ease 0.3s;
   }
 
   @media (hover: hover) {
-    three-section-block strong>a:hover {
+    three-section-block strong > a:hover {
       color: var(--yellow);
     }
   }
 
-  three-section-block strong>a:focus {
+  three-section-block strong > a:focus {
     color: var(--yellow);
   }
 
@@ -941,7 +941,7 @@
     align-items: end;
   }
 
-  three-section-block:has(header-section) header-section>* {
+  three-section-block:has(header-section) header-section > * {
     grid-area: initial;
   }
 
@@ -983,7 +983,7 @@
       scroll-snap-type: x mandatory
     }
 
-    gallery-block>* {
+    gallery-block > * {
       scroll-snap-align: center;
     }
   }
@@ -1069,7 +1069,7 @@
     font-family: Cabin;
   }
 
-  advantages-row>* {
+  advantages-row > * {
     display: grid;
     gap: 15px;
     text-align: center;
@@ -1110,12 +1110,12 @@
     grid-area: subtitle;
   }
 
-  header-section[three-sections]>h2 {
+  header-section[three-sections] > h2 {
     grid-area: title;
   }
 
-  header-section[three-sections]>a,
-  header-section[three-sections]>button {
+  header-section[three-sections] > a,
+  header-section[three-sections] > button {
     grid-area: ref;
     align-self: end;
   }
@@ -1126,7 +1126,7 @@
     max-width: 650px;
   }
 
-  header-section[three-sections][revert]>h2 {
+  header-section[three-sections][revert] > h2 {
     grid-area: subtitle;
   }
 
@@ -1136,7 +1136,7 @@
     flex-flow: row wrap;
   }
 
-  team-section>* {
+  team-section > * {
     flex: 1 1 270px;
   }
 
@@ -1153,7 +1153,7 @@
       scroll-snap-type: x mandatory
     }
 
-    team-section>* {
+    team-section > * {
       scroll-snap-align: center;
     }
   }
@@ -1182,13 +1182,13 @@
   }
 
   @media (hover: hover) {
-    teammate-block>a:hover photo-block strong {
+    teammate-block > a:hover photo-block strong {
       background: var(--yellow);
       color: var(--black);
     }
   }
 
-  teammate-block>a:focus photo-block strong {
+  teammate-block > a:focus photo-block strong {
     background: var(--yellow);
     color: var(--black);
   }
@@ -1221,7 +1221,7 @@
     transition: all 0.2s ease;
   }
 
-  teammate-block>strong {
+  teammate-block > strong {
     font-family: Cabin;
     font-weight: 700;
     font-size: 30px;
@@ -1256,12 +1256,12 @@
     display: grid;
     gap: 15px;
     border-radius: 20px;
-    background: no-repeat calc(100% - 25px) -50% / 100px url('../../images/bgPattern.svg'), var(--black);
+    background: no-repeat calc(100% - 25px) -50% / 100px url('../images/bgPattern.svg'), var(--black);
     color: var(--white);
     padding: 25px;
   }
 
-  pricing-card header>strong {
+  pricing-card header > strong {
     font-family: Cabin;
     font-weight: 600;
     font-size: 25px;
@@ -1304,13 +1304,13 @@
     content: url('../images/icons/black-bg-arrow-right.svg');
   }
 
-  pricing-card>a {
+  pricing-card > a {
     text-align: center;
     border: 1px solid #d6d6d6 !important;
   }
 
   @media (max-width: 426px) {
-    pricing-card> :is(a, ul) {
+    pricing-card > :is(a, ul) {
       margin-inline: 20px;
     }
   }
@@ -1403,7 +1403,7 @@
   }
 
   @media (max-width: 1024px) {
-    section#contact text-block> :is(highlighted-text, p, h2) {
+    section#contact text-block > :is(highlighted-text, p, h2) {
       text-align: center;
     }
   }
@@ -1448,14 +1448,14 @@
     overflow: hidden;
   }
 
-  section#subscribe>* {
+  section#subscribe > * {
     z-index: 1;
   }
 
   section#subscribe:before {
     position: absolute;
     inset: 0 0 auto auto;
-    content: url('../../images/bgPattern.svg');
+    content: url('../images/bgPattern.svg');
     translate: 50% -50%;
     rotate: 45deg;
   }
@@ -1469,12 +1469,12 @@
   section#subscribe:after {
     position: absolute;
     inset: auto 0 0 auto;
-    content: url('../../images/icons/green-square.svg');
+    content: url('../images/icons/green-square.svg');
     rotate: 45deg;
     translate: 20% 70%;
   }
 
-  section#subscribe header-section>* {
+  section#subscribe header-section > * {
     text-shadow: 0 0 5px #000;
   }
 
@@ -1519,7 +1519,7 @@
       scroll-snap-type: x mandatory
     }
 
-    section#services services-container>* {
+    section#services services-container > * {
       scroll-snap-align: start;
     }
   }
@@ -1546,7 +1546,7 @@
     color: var(--white);
   }
 
-  section#video-block.black>* {
+  section#video-block.black > * {
     color: var(--white);
   }
 
@@ -1565,7 +1565,7 @@
     justify-content: center;
     align-items: center;
     aspect-ratio: 21/9;
-    background: no-repeat center / 85% url('../../images/history-bg.webp'), no-repeat top right / 30% url('../../images/bgPattern.svg'), no-repeat bottom left / 15% url('../../images/icons/green-square.svg');
+    background: no-repeat center / 85% url('../images/history-bg.webp'), no-repeat top right / 30% url('../images/bgPattern.svg'), no-repeat bottom left / 15% url('../images/icons/green-square.svg');
   }
 
   section#video-block play-area button {
@@ -1657,10 +1657,10 @@
   }
 
   section#vision text-block ul li:before {
-    content: url('../../images/icons/green-check-mark.svg');
+    content: url('../images/icons/green-check-mark.svg');
   }
 
-  section#vision images-block>picture img {
+  section#vision images-block > picture img {
     -o-object-fit: cover;
     object-fit: cover;
     border-radius: 20px;
@@ -1712,7 +1712,7 @@
     translate: -30% -15%;
     width: 70%;
     height: 70%;
-    background: no-repeat top left / 100% url('../../images/bgPattern.svg');
+    background: no-repeat top left / 100% url('../images/bgPattern.svg');
     content: '';
   }
 
@@ -1721,7 +1721,7 @@
     inset: 0 auto auto 0;
     z-index: -1;
     translate: -15% -10%;
-    content: url('../../images/icons/green-square.svg');
+    content: url('../images/icons/green-square.svg');
   }
 
   [class*='decorated-image'][class*='-small']:before {
@@ -1756,7 +1756,7 @@
     padding-bottom: 20px;
   }
 
-  spoiler-wrapper>button {
+  spoiler-wrapper > button {
     font-family: 'Cabin';
     font-weight: 500;
     font-size: 20px;
@@ -1766,17 +1766,17 @@
     justify-content: space-between;
   }
 
-  spoiler-wrapper>button[aria-expanded='true'] svg {
+  spoiler-wrapper > button[aria-expanded='true'] svg {
     clip-path: polygon(0 50%, 100% 50%, 100% 57%, 0 57%);
   }
 
-  spoiler-wrapper>button svg {
+  spoiler-wrapper > button svg {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: clip-path ease 0.3s;
     margin-left: 15px;
   }
 
-  spoiler-wrapper>content-block {
+  spoiler-wrapper > content-block {
     --transition-timing: 0.3s;
     display: grid;
     /* You can "ajar" a content element by setting a value between 0 and 1 fr. */
@@ -1784,21 +1784,21 @@
     transition: grid-template-rows var(--transition-timing) ease;
   }
 
-  spoiler-wrapper>content-block:has(dialog[open]) {
+  spoiler-wrapper > content-block:has(dialog[open]) {
     grid-template-rows: 1fr;
   }
 
-  spoiler-wrapper>content-block dialog {
+  spoiler-wrapper > content-block dialog {
     overflow: hidden;
     opacity: 1;
     transition: opacity var(--transition-timing) ease;
   }
 
-  spoiler-wrapper>content-block dialog p {
+  spoiler-wrapper > content-block dialog p {
     padding-top: 20px;
   }
 
-  spoiler-wrapper>content-block dialog:not([open]) {
+  spoiler-wrapper > content-block dialog:not([open]) {
     pointer-events: none;
   }
 
@@ -1824,12 +1824,12 @@
     margin-block: 15px;
   }
 
-  .blog-lists ul>li {
+  .blog-lists ul > li {
     display: flex;
     align-items: center;
   }
 
-  .blog-lists ul>li:before {
+  .blog-lists ul > li:before {
     display: inline-block;
     background: var(--main-text-color);
     width: 3px;
@@ -1845,11 +1845,11 @@
     counter-reset: numbers;
   }
 
-  .blog-lists ol>li {
+  .blog-lists ol > li {
     counter-increment: numbers;
   }
 
-  .blog-lists ol>li:before {
+  .blog-lists ol > li:before {
     content: counter(numbers) '. ';
   }
 
