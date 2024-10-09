@@ -297,6 +297,26 @@ section#gallery gallery-block {
   border-radius: 20px;
 }
 
+section#gallery gallery-block gallery-item:nth-child(1) {
+  background-image: url('../../images/about-us.jpg');
+}
+
+section#gallery gallery-block gallery-item:nth-child(2) {
+  background-image: url('../../images/development-bg.png');
+}
+
+section#gallery gallery-block gallery-item:nth-child(4) {
+  background-image: url('../../images/vision.png');
+}
+
+section#gallery gallery-block gallery-item:nth-child(5) {
+  background-image: url('../../images/content-image.jpg');
+}
+
+section#gallery gallery-block gallery-item:nth-child(6) {
+  background-image: url('../../images/strategy.png');
+}
+
 @media (max-width: 769px) {
   section#gallery gallery-block {
     margin-inline: calc(-1 * var(--content-inline-padding));
